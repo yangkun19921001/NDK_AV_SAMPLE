@@ -1,0 +1,2 @@
+当前cmakel路径: /Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/src/main/cpp 
+ cpu架构：armeabi-v7a

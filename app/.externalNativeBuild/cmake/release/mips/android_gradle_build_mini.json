@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/release/mips --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-mips": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/release/mips --target native-lib",
+      "abi": "mips",
+      "output": "/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/build/intermediates/cmake/release/obj/mips/libnative-lib.so"
+    }
+  }
+}

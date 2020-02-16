@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/src/main/cpp/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/debug/arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"native-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/debug/arm64-v8a --target native-lib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot  -Dnative_lib_EXPORTS -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/android/support/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/debug/arm64-v8a"
+				}
+			],
+			"output" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so",
+			"toolchain" : "5310613727112554752"
+		}
+	},
+	"toolchains" : 
+	{
+		"5310613727112554752" : 
+		{
+			"cCompilerExecutable" : "/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

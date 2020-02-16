@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/src/main/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/Users/devyk/Data/Android/NDK/android-ndk-r17c/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/src/main/jni/Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-15 NDK_OUT\u003d/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "MyTestSo-release-armeabi-v7a": {
+      "artifactName": "MyTestSo",
+      "buildCommand": "/Users/devyk/Data/Android/NDK/android-ndk-r17c/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/src/main/jni/Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-15 NDK_OUT\u003d/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/lib /Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libMyTestSo.so",
+      "abi": "armeabi-v7a",
+      "output": "/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libMyTestSo.so"
+    }
+  }
+}

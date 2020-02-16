@@ -1,0 +1,4 @@
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA>>>
+当前CMake的路径是：/Users/devyk/Data/Project/sample/github_code/ndk_sample/cmake_application/src/main/cpp
+当前 CMAKE_ANDROID_ARCH_ABI 的路径是：armeabi-v7a
+当前的log路径在哪里啊 >>>>>>>>>>>>>>>>> /Users/devyk/Data/Android/NDK/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/liblog.so

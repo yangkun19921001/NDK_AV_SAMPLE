@@ -1,0 +1,19 @@
+[1/2] Building CXX object CMakeFiles/YK_PLAYER.dir/player/VideoChannel.cpp.o
+clang++: warning: argument unused during compilation: '-L/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/src/main/cpp/ffmpeg/libs/armeabi-v7a' [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-L/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/src/main/cpp/librtmp/libs/armeabi-v7a' [-Wunused-command-line-argument]
+/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/src/main/cpp/player/VideoChannel.cpp:249:52: warning: format specifies type 'int' but the argument has type 'double' [-Wformat]
+                LOGE("av_time_diff > 1 睡眠:%d", (result_delay * 2) * 1000000);
+                                            ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                            %f
+/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/src/main/cpp/player/include/Constants.h:15:64: note: expanded from macro 'LOGE'
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG,  __VA_ARGS__);
+                                                               ^~~~~~~~~~~
+/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/src/main/cpp/player/VideoChannel.cpp:252:52: warning: format specifies type 'int' but the argument has type 'double' [-Wformat]
+                LOGE("av_time_diff < 1 睡眠:%d", (av_time_diff + result_delay) * 1000000);
+                                            ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                            %f
+/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/src/main/cpp/player/include/Constants.h:15:64: note: expanded from macro 'LOGE'
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG,  __VA_ARGS__);
+                                                               ^~~~~~~~~~~
+2 warnings generated.
+[2/2] Linking CXX shared library /Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/build/intermediates/cmake/debug/obj/armeabi-v7a/libYK_PLAYER.so

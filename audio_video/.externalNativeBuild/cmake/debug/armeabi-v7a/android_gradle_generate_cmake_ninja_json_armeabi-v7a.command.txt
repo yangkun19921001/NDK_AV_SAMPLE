@@ -1,0 +1,14 @@
+Executable : /Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake
+arguments : 
+-H/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp
+-B/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_PLATFORM=android-15
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/build/intermediates/cmake/debug/obj/armeabi-v7a
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=/Users/devyk/Data/Android/NDK/android-ndk-r17c
+-DCMAKE_TOOLCHAIN_FILE=/Users/devyk/Data/Android/NDK/android-ndk-r17c/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/ninja
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

@@ -1,0 +1,15 @@
+Executable : /Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake
+arguments : 
+-H/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/src/main/cpp
+-B/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/release/x86
+-DANDROID_ABI=x86
+-DANDROID_PLATFORM=android-15
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/build/intermediates/cmake/release/obj/x86
+-DCMAKE_BUILD_TYPE=Release
+-DANDROID_NDK=/Users/devyk/Data/Android/NDK/android-ndk-r17c
+-DCMAKE_CXX_FLAGS=
+-DCMAKE_TOOLCHAIN_FILE=/Users/devyk/Data/Android/NDK/android-ndk-r17c/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/ninja
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

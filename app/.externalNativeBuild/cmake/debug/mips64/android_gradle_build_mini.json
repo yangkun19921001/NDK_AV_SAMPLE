@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/debug/mips64 --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-mips64": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/app/.externalNativeBuild/cmake/debug/mips64 --target native-lib",
+      "abi": "mips64",
+      "output": "/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/build/intermediates/cmake/debug/obj/mips64/libnative-lib.so"
+    }
+  }
+}

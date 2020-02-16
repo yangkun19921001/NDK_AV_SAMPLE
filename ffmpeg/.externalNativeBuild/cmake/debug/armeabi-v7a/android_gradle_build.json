@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/src/main/cpp/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/.externalNativeBuild/cmake/debug/armeabi-v7a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"ffmpeg_lib-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "ffmpeg_lib",
+			"buildCommand" : "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/.externalNativeBuild/cmake/debug/armeabi-v7a --target ffmpeg_lib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot  -Dffmpeg_lib_EXPORTS -I/Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/src/main/cpp/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/android/support/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -L/Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/src/main/cpp/armeabi-v7a -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/src/main/cpp/ffmpeg_lib.cpp",
+					"workingDirectory" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/ffmpeg/build/intermediates/cmake/debug/obj/armeabi-v7a/libffmpeg_lib.so",
+			"toolchain" : "5310613727112554752"
+		}
+	},
+	"toolchains" : 
+	{
+		"5310613727112554752" : 
+		{
+			"cCompilerExecutable" : "/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

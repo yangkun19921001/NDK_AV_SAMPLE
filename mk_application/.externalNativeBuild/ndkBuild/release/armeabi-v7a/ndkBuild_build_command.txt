@@ -1,0 +1,16 @@
+Executable : /Users/devyk/Data/Android/NDK/android-ndk-r17c/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/src/main/jni/Android.mk
+APP_ABI=armeabi-v7a
+NDK_ALL_ABIS=armeabi-v7a
+NDK_DEBUG=0
+APP_PLATFORM=android-15
+NDK_OUT=/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/obj
+NDK_LIBS_OUT=/Users/devyk/Data/Project/sample/github_code/ndk_sample/mk_application/build/intermediates/ndkBuild/release/lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-B
+-n
+jvmArgs : 
+

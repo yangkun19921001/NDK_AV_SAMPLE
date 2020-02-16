@@ -1,0 +1,65 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"audiovideo-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "audiovideo",
+			"buildCommand" : "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a --target audiovideo",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot  -Daudiovideo_EXPORTS -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/android/support/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp/opensl/OpenSLAudioPlay.cpp",
+					"workingDirectory" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot  -Daudiovideo_EXPORTS -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/android/support/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp/opensl/audio_play.cpp",
+					"workingDirectory" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot  -Daudiovideo_EXPORTS -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/android/support/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp/gles/PlayCallback.cpp",
+					"workingDirectory" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot  -Daudiovideo_EXPORTS -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/android/support/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp/gles/gles_play.cpp",
+					"workingDirectory" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot  -Daudiovideo_EXPORTS -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/android/support/include -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/devyk/Data/Android/NDK/android-ndk-r17c/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp/gles/video_play.cpp",
+					"workingDirectory" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/build/intermediates/cmake/debug/obj/armeabi-v7a/libaudiovideo.so",
+			"toolchain" : "5310613727112554752"
+		}
+	},
+	"toolchains" : 
+	{
+		"5310613727112554752" : 
+		{
+			"cCompilerExecutable" : "/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/devyk/Data/Android/NDK/android-ndk-r17c/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

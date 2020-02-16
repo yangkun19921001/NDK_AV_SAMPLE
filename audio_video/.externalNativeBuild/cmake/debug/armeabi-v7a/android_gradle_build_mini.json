@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "audiovideo-Debug-armeabi-v7a": {
+      "artifactName": "audiovideo",
+      "buildCommand": "/Users/devyk/Data/Android/SDK/cmake/3.6.4111459/bin/cmake --build /Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/.externalNativeBuild/cmake/debug/armeabi-v7a --target audiovideo",
+      "abi": "armeabi-v7a",
+      "output": "/Users/devyk/Data/Project/sample/github_code/ndk_sample/audio_video/build/intermediates/cmake/debug/obj/armeabi-v7a/libaudiovideo.so"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[1/2] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/src/main/cpp/native-lib.cpp:53:23: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+    LOGD("long-> %d", l_long);
+                 ~~   ^~~~~~
+                 %ld
+/Users/devyk/Data/Project/sample/github_code/ndk_sample/app/src/main/cpp/native-lib.cpp:9:64: note: expanded from macro 'LOGD'
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG,  __VA_ARGS__);
+                                                               ^~~~~~~~~~~
+1 warning generated.
+[2/2] Linking CXX shared library /Users/devyk/Data/Project/sample/github_code/ndk_sample/app/build/intermediates/cmake/debug/obj/mips64/libnative-lib.so

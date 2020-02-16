@@ -54,11 +54,13 @@ public:
         }
     }
 
-//    // AVPacket  音频：aac，  视频：h264
-//    SafeQueue<AVPacket *> packages; // 音频 或者 视频 的压缩数据包 (是编码的数据包)
-//
-//    // AVFrame 音频：PCM，   视频：YUV
-//    SafeQueue<AVFrame *> frames; // 音频 或者 视频 的原始数据包（可以直接 渲染 和 播放 的）
+    // AVPacket  音频：aac，  视频：h264
+    SafeQueue<AVPacket *> packages; // 音频 或者 视频 的压缩数据包 (是编码的数据包)
+
+    // AVFrame 音频：PCM，   视频：YUV
+    SafeQueue<AVFrame *> frames; // 音频 或者 视频 的原始数据包（可以直接 渲染 和 播放 的）
+
+
 
     bool isPlaying = 1;
     bool isStop = false;

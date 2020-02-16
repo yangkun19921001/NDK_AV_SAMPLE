@@ -47,11 +47,7 @@ public:
 
     void restart();
 
-    // AVPacket  音频：aac
-    SafeQueue<AVPacket *> audioPackages; // 音频的压缩数据包 (是编码的数据包)
 
-    // AVFrame 音频：PCM
-    SafeQueue<AVFrame *> audioFrames; // 音频的原始数据包（可以直接 渲染 和 播放 的）
 
 private:
     // 线程ID

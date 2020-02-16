@@ -12,8 +12,6 @@ AudioChannel::AudioChannel(int stream_index,
                            AVCodecContext *pContext, AVRational avRational)
         : BaseChannel(stream_index, pContext, avRational) {
 
-    audioPackages.setReleaseCallback(releaseAVPacket);
-    audioFrames.setReleaseCallback(releaseAVFrame);
 
     //初始化 缓冲区 out_buffers
     //如果定义缓冲区
@@ -83,10 +81,10 @@ void AudioChannel::start() {
     //设置正在播放的标志
     isPlaying = true;
     //存放为解码的队列开始工作了
-    audioPackages.setFlag(1);
+    packages.setFlag(1);
 
     //存放解码后的队列开始工作了
-    audioFrames.setFlag(1);
+    frames.setFlag(1);
 
     //1. 解码线程
     pthread_create(&pid_audio_decode, 0, thread_audio_decode, this);
@@ -112,15 +110,15 @@ void AudioChannel::audio_decode() {
 
         //这里有一个 bug，如果生产快，消费慢，就会造成队列数据过多容易造成 OOM,
         //解决办法：控制队列大小
-        if (isPlaying && audioFrames.queueSize() > 100) {
-//            LOGE("音频队列中的 size :%d", audioFrames.queueSize());
+        if (isPlaying && frames.queueSize() > 100) {
+//            LOGE("音频队列中的 size :%d", frames.queueSize());
             //线程休眠 10s
             av_usleep(10 * 1000);
             continue;
         }
 
         //可以正常取出
-        int ret = audioPackages.pop(avPacket);
+        int ret = packages.pop(avPacket);
         //条件判断是否可以继续
         if (!ret) continue;
         if (!isPlaying) break;
@@ -146,7 +144,7 @@ void AudioChannel::audio_decode() {
         }
 
         //将获取到的原始数据放入队列中，也就是解码后的原始数据
-        audioFrames.push(avFrame);
+        frames.push(avFrame);
     }
 
     //释放packet
@@ -174,7 +172,7 @@ int AudioChannel::getPCM() {
             continue;
         }
 
-        int ret = audioFrames.pop(pcmFrame);
+        int ret = frames.pop(pcmFrame);
         if (!isPlaying)break;
         if (!ret)continue;
 
@@ -369,12 +367,12 @@ void AudioChannel::release() {
     isPlaying = false;
     isStop = true;
 
-    if (audioFrames.queueSize() > 0) {
-        audioFrames.clearQueue();
+    if (frames.queueSize() > 0) {
+        frames.clearQueue();
     }
 
-    if (audioPackages.queueSize() > 0) {
-        audioPackages.clearQueue();
+    if (packages.queueSize() > 0) {
+        packages.clearQueue();
     }
 
 }

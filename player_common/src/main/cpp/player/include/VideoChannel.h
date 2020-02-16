@@ -34,15 +34,13 @@ public:
 
     void setRenderCallback(RenderCallback renderCallback);
 
+    void setAudioChannel(AudioChannel* audioChannel);
+
     void release();
 
     void restart();
 
-    // AVPacket    视频：h264
-    SafeQueue<AVPacket *> videoPackages; //  视频 的压缩数据包 (是编码的数据包)
 
-    // AVFrame   视频：YUV
-    SafeQueue<AVFrame *> videoFrames; //  视频 的原始数据包（可以直接 渲染 和 播放 的）
 
 private:
     pthread_t pid_video_decode;
@@ -51,6 +49,7 @@ private:
 
     int fpsValue;//视频 fps
 
+    AudioChannel* audioChannel = 0;
 
 };
 

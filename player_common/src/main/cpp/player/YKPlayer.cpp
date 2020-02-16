@@ -3,6 +3,7 @@
 //
 
 #include "include/YKPlayer.h"
+#include <unistd.h>
 
 
 //异步 函数指针 void* (*__start_routine)(void*) 准备工作 prepare
@@ -204,19 +205,19 @@ void YKPlayer::start_() {
     // 循环 读音视频包
     while (isPlaying) {
         if (isStop) {
-            av_usleep(2 * 1000);
+            usleep(2 * 1000 * 1000);
             continue;
         }
         LOGD("start_");
         //内存泄漏点 1，解决方法 : 控制队列大小
-        if (videoChannel && videoChannel->videoPackages.queueSize() > 100) {
+        if (videoChannel && videoChannel->packages.queueSize() > 100) {
             //休眠 等待队列中的数据被消费
             av_usleep(10 * 1000);
             continue;
         }
 
         //内存泄漏点 2 ，解决方案 控制队列大小
-        if (audioChannel && audioChannel->audioPackages.queueSize() > 100) {
+        if (audioChannel && audioChannel->packages.queueSize() > 100) {
             //休眠 等待队列中的数据被消费
             av_usleep(10 * 1000);
             continue;
@@ -232,10 +233,10 @@ void YKPlayer::start_() {
         if (!ret) {
             if (videoChannel && videoChannel->stream_index == packet->stream_index) {//视频包
                 //未解码的 视频数据包 加入队列
-                videoChannel->videoPackages.push(packet);
+                videoChannel->packages.push(packet);
             } else if (audioChannel && audioChannel->stream_index == packet->stream_index) {//语音包
                 //将语音包加入到队列中，以供解码使用
-                audioChannel->audioPackages.push(packet);
+                audioChannel->packages.push(packet);
             }
         } else if (ret == AVERROR_EOF) { //代表读取完毕了
             //TODO----

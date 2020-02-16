@@ -87,3 +87,15 @@
 568	2108	0	/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/build/intermediates/cmake/debug/obj/armeabi-v7a/libYK_PLAYER.so	1f374e4590a48e8c
 0	373	0	CMakeFiles/YK_PLAYER.dir/player/VideoChannel.cpp.o	fafec36fcd74bff0
 373	1148	0	/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/build/intermediates/cmake/debug/obj/armeabi-v7a/libYK_PLAYER.so	1f374e4590a48e8c
+2	534	0	CMakeFiles/YK_PLAYER.dir/player/player-lib.cpp.o	91f8e5d91237e415
+2	602	0	CMakeFiles/YK_PLAYER.dir/player/VideoChannel.cpp.o	fafec36fcd74bff0
+1	603	0	CMakeFiles/YK_PLAYER.dir/player/AudioChannel.cpp.o	490471d6c7ea84d5
+1	354	0	CMakeFiles/YK_PLAYER.dir/player/YKPlayer.cpp.o	571bd540da8d92e1
+354	2063	0	/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/build/intermediates/cmake/debug/obj/armeabi-v7a/libYK_PLAYER.so	1f374e4590a48e8c
+1	463	0	CMakeFiles/YK_PLAYER.dir/player/player-lib.cpp.o	91f8e5d91237e415
+1	541	0	CMakeFiles/YK_PLAYER.dir/player/YKPlayer.cpp.o	571bd540da8d92e1
+0	406	0	CMakeFiles/YK_PLAYER.dir/player/VideoChannel.cpp.o	fafec36fcd74bff0
+406	2338	0	/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/build/intermediates/cmake/debug/obj/armeabi-v7a/libYK_PLAYER.so	1f374e4590a48e8c
+1	544	0	CMakeFiles/YK_PLAYER.dir/player/YKPlayer.cpp.o	571bd540da8d92e1
+1	568	0	CMakeFiles/YK_PLAYER.dir/player/VideoChannel.cpp.o	fafec36fcd74bff0
+568	2180	0	/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/build/intermediates/cmake/debug/obj/armeabi-v7a/libYK_PLAYER.so	1f374e4590a48e8c

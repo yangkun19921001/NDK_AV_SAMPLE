@@ -6,8 +6,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="AvailableLibraryUpdateStorage">
     <library-updates>
@@ -45,7 +45,38 @@
     <last-search-timestamp>1581504275435</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb624877-9ecc-46c3-8f92-a0eb5acad1a5" name="Default Changelist" comment="播放器开发完成" />
+    <list default="true" id="cb624877-9ecc-46c3-8f92-a0eb5acad1a5" name="Default Changelist" comment="播放器开发完成">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_video/audio_video.iml" beforeDir="false" afterPath="$PROJECT_DIR$/audio_video/audio_video.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/APP.java" beforeDir="false" afterPath="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/APP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/AudioChannel.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/AudioChannel.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/VideoChannel.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/VideoChannel.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/YKPlayer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/YKPlayer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/player-lib.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir/player/player-lib.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/android_gradle_build_YK_PLAYER_armeabi-v7a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/android_gradle_build_YK_PLAYER_armeabi-v7a.stdout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/android_gradle_build.json" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/android_gradle_build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/android_gradle_generate_cmake_ninja_json_armeabi-v7a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/android_gradle_generate_cmake_ninja_json_armeabi-v7a.stdout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_build_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/.externalNativeBuild/cmake/release/armeabi-v7a/cmake_build_output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/src/main/cpp/player/AudioChannel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/src/main/cpp/player/AudioChannel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/src/main/cpp/player/include/AudioChannel.h" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/src/main/cpp/player/include/AudioChannel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/src/main/cpp/player/include/BaseChannel.h" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/src/main/cpp/player/include/BaseChannel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_common/src/main/cpp/player/include/VideoChannel.h" beforeDir="false" afterPath="$PROJECT_DIR$/player_common/src/main/cpp/player/include/VideoChannel.h" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +124,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/APP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/AudioChannel.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="209" column="16" selection-start-line="209" selection-start-column="16" selection-end-line="209" selection-end-column="16" />
-              <folding>
-                <element signature="e#39#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -107,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/AudioChannel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+            <state relative-caret-position="137">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#210#241#0" expanded="true" />
               </folding>
@@ -117,28 +154,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/ffmpeg/include/libavutil/avutil.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="200" column="14" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/BaseChannel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../Android/NDK/android-ndk-r17c/sysroot/usr/include/SLES/OpenSLES.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+            <state relative-caret-position="571">
+              <caret line="65" column="11" lean-forward="true" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -146,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/player-lib.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="63" column="21" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="21" />
+            <state relative-caret-position="203">
+              <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
               <folding>
                 <element signature="e#38#54#0" expanded="true" />
               </folding>
@@ -156,12 +175,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/safe_queue.h">
+        <entry file="file://$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="698">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+            <state relative-caret-position="578">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
               <folding>
-                <element signature="e#185#197#0" expanded="true" />
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1400#1401#0" expanded="true" />
+                <element signature="e#1564#1565#0" expanded="true" />
+                <element signature="e#1618#1619#0" expanded="true" />
+                <element signature="e#1771#1772#0" expanded="true" />
+                <element signature="e#1824#1825#0" expanded="true" />
+                <element signature="e#1908#1909#0" expanded="true" />
+                <element signature="e#1941#1942#0" expanded="true" />
+                <element signature="e#2003#2004#0" expanded="true" />
+                <element signature="e#2035#2036#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,8 +198,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="248" column="38" selection-start-line="248" selection-start-column="38" selection-end-line="248" selection-end-column="38" />
+            <state relative-caret-position="193">
+              <caret line="95" column="18" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="18" />
               <folding>
                 <element signature="e#40#73#0" expanded="true" />
               </folding>
@@ -182,8 +210,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/VideoChannel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="331">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
               <folding>
                 <element signature="e#109#133#0" expanded="true" />
               </folding>
@@ -194,8 +222,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-958">
-              <caret line="164" selection-start-line="164" selection-end-line="164" />
+            <state relative-caret-position="193">
+              <caret line="265" column="4" selection-start-line="265" selection-start-column="4" selection-end-line="265" selection-end-column="4" />
+              <folding>
+                <element signature="e#39#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/YKPlayer.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding>
+                <element signature="e#101#125#0" expanded="true" />
+                <element signature="e#192#225#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -227,10 +271,16 @@
       <find>packages</find>
       <find>releaseAVPacket</find>
       <find>alloc_device_alloc</find>
+      <find>videoFrames</find>
+      <find>videoPackages</find>
+      <find>audioPackages</find>
+      <find>isStop</find>
     </findStrings>
     <replaceStrings>
       <replace>OpenSLAudioPlay</replace>
       <replace>videoPackages</replace>
+      <replace>frames</replace>
+      <replace>packages</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/video</dir>
@@ -242,7 +292,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/audioplay/src/main/java/com/devyk/audioplay/Utils.java" />
         <option value="$PROJECT_DIR$/audio/src/main/cpp/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/audio/src/main/java/com/devyk/audiovideo/audio/AudioPlayActivity.java" />
         <option value="$PROJECT_DIR$/audiovideo/src/main/cpp/opensl/audio_play.cpp" />
@@ -262,7 +311,6 @@
         <option value="$PROJECT_DIR$/audio_video/src/main/cpp/gles/video_play.h" />
         <option value="$PROJECT_DIR$/audio_video/src/main/cpp/gles/PlayCallback.h" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/APP.java" />
         <option value="$PROJECT_DIR$/audio_video/build.gradle" />
         <option value="$PROJECT_DIR$/audio_video/src/main/cpp/gles/PlayCallback.cpp" />
         <option value="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/SuUtil.java" />
@@ -278,8 +326,6 @@
         <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/include/YKPlayer.h" />
         <option value="$PROJECT_DIR$/player_common/src/main/java/com/devyk/player_common/play/YKPlayer.java" />
         <option value="$PROJECT_DIR$/myplayer/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/include/BaseChannel.h" />
-        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/include/AudioChannel.h" />
         <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/include/safe_queue.h" />
         <option value="$PROJECT_DIR$/myplayer/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/player-lib.cpp" />
@@ -289,10 +335,14 @@
         <option value="$PROJECT_DIR$/myplayer/build.gradle" />
         <option value="$PROJECT_DIR$/player_common/src/main/cpp/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/player_common/src/main/java/com/devyk/player_common/PlayerManager.java" />
-        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp" />
-        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/AudioChannel.cpp" />
+        <option value="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/APP.java" />
+        <option value="$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/Utils.java" />
+        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/include/AudioChannel.h" />
+        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/include/BaseChannel.h" />
         <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/include/VideoChannel.h" />
+        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/AudioChannel.cpp" />
         <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp" />
+        <option value="$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp" />
       </list>
     </option>
   </component>
@@ -316,70 +366,6 @@
             <path>
               <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
               <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jniLibs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="audiovideo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="audio_video" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="raw" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
@@ -484,6 +470,106 @@
               <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
               <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".externalNativeBuild" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".externalNativeBuild" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".externalNativeBuild" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".externalNativeBuild" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+              <item name="armeabi-v7a" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
+              <item name="obj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
+              <item name="obj" type="462c0819:PsiDirectoryNode" />
+              <item name="armeabi-v7a" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+              <item name="obj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -500,36 +586,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="cpp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="cpp" type="462c0819:PsiDirectoryNode" />
-              <item name="ffmpeg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="cpp" type="462c0819:PsiDirectoryNode" />
-              <item name="ffmpeg" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="player_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="cpp" type="462c0819:PsiDirectoryNode" />
-              <item name="ffmpeg" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="libswscale" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
@@ -1020,6 +1076,19 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.devyk.audiovideo.Utils" />
+      <module name="audio_video" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.devyk.audiovideo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -1041,6 +1110,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Utils" />
         <item itemvalue="Gradle./Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common [build]" />
       </list>
     </recent_temporary>
@@ -1107,8 +1177,8 @@
       <window_info id="DB Browser" order="7" weight="0.3293247" />
       <window_info id="Capture Tool" order="8" />
       <window_info id="Favorites" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.3295838" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.48367348" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32857144" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.07755102" />
       <window_info anchor="bottom" id="DB Execution Console" order="2" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Android Profiler" order="4" />
@@ -1116,8 +1186,8 @@
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.19241443" side_tool="true" weight="0.58942634" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.4122449" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.23163265" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.32959184" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.68877554" />
+      <window_info anchor="bottom" id="Find" order="10" visible="true" weight="0.32959184" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.32967034" />
@@ -1155,7 +1225,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
-          <line>271</line>
+          <line>272</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -1200,38 +1270,48 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp</url>
-          <line>241</line>
+          <line>242</line>
           <option name="timeStamp" value="182" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp</url>
-          <line>247</line>
+          <line>248</line>
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
-          <line>66</line>
+          <line>67</line>
           <option name="timeStamp" value="215" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
-          <line>68</line>
+          <line>69</line>
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
-          <line>293</line>
+          <line>295</line>
           <option name="timeStamp" value="221" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
-          <line>257</line>
+          <line>258</line>
           <option name="timeStamp" value="226" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
-          <line>244</line>
+          <line>245</line>
           <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
+          <line>224</line>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp</url>
+          <line>234</line>
+          <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cmake_application/src/main/java/com/devyk/cmake_application/MainActivity.java</url>
@@ -1309,13 +1389,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/audio_video/src/main/cpp/gles/PlayCallback.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../Android/NDK/android-ndk-r17c/sysroot/usr/include/stdio.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
@@ -1489,30 +1562,12 @@
         <state relative-caret-position="-165" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/TestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/APP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="35" selection-start-line="35" selection-end-line="52" selection-end-column="25" />
-          <folding>
-            <element signature="e#1291#1519#0" expanded="true" />
-            <element signature="e#1518#1519#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1608,28 +1663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/YKPlayer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#101#125#0" expanded="true" />
-            <element signature="e#192#225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/ffmpeg/include/libswscale/swscale.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-958">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
         </state>
       </provider>
     </entry>
@@ -1644,26 +1681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="200" column="14" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/player-lib.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="21" />
-          <folding>
-            <element signature="e#38#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/AudioChannel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
-          <folding>
-            <element signature="e#210#241#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1684,37 +1701,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/VideoChannel.h">
+    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="211">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/APP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio_video/src/main/java/com/devyk/audiovideo/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
           <folding>
-            <element signature="e#109#133#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1400#1401#0" expanded="true" />
+            <element signature="e#1564#1565#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#1824#1825#0" expanded="true" />
+            <element signature="e#1908#1909#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/AudioChannel.cpp">
+    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/AudioChannel.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="209" column="16" selection-start-line="209" selection-start-column="16" selection-end-line="209" selection-end-column="16" />
+        <state relative-caret-position="137">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
-            <element signature="e#39#58#0" expanded="true" />
+            <element signature="e#210#241#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/BaseChannel.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+        <state relative-caret-position="571">
+          <caret line="65" column="11" lean-forward="true" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/VideoChannel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="e#109#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/player-lib.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+          <folding>
+            <element signature="e#38#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/AudioChannel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/include/YKPlayer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="e#101#125#0" expanded="true" />
+            <element signature="e#192#225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/YKPlayer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="265" column="4" selection-start-line="265" selection-start-column="4" selection-end-line="265" selection-end-column="4" />
+          <folding>
+            <element signature="e#39#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player_common/src/main/cpp/player/VideoChannel.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="248" column="38" selection-start-line="248" selection-start-column="38" selection-end-line="248" selection-end-column="38" />
+        <state relative-caret-position="193">
+          <caret line="95" column="18" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="18" />
           <folding>
             <element signature="e#40#73#0" expanded="true" />
           </folding>

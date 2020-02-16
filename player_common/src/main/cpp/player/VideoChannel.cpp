@@ -37,11 +37,9 @@ void dropAVPacket(queue<AVPacket *> &qq) {
 VideoChannel::VideoChannel(int stream, AVCodecContext *pContext, AVRational rational, int fpsValue)
         : BaseChannel(stream, pContext, rational) {
     this->fpsValue = fpsValue;
-    this->videoFrames.setDeleteVideoFrameCallback(dropAVFrame);
-    this->videoPackages.setDeleteVideoFrameCallback(dropAVPacket);
+    this->frames.setDeleteVideoFrameCallback(dropAVFrame);
+    this->packages.setDeleteVideoFrameCallback(dropAVPacket);
 
-    videoPackages.setReleaseCallback(releaseAVPacket);
-    videoFrames.setReleaseCallback(releaseAVFrame);
 
 }
 
@@ -78,10 +76,10 @@ void VideoChannel::start() {
     isPlaying = 1;
 
     //存放未解码的队列开始工作了
-    videoPackages.setFlag(1);
+    packages.setFlag(1);
 
     //存放解码后的队列开始工作了
-    videoFrames.setFlag(1);
+    frames.setFlag(1);
 
     //1. 创建解码线程
     pthread_create(&pid_video_decode, 0, taskVideoDecodeThread, this);
@@ -96,20 +94,20 @@ void VideoChannel::video_decode() {
     AVPacket *packet = 0;
     while (isPlaying) {
         if (isStop) {
-            //线程休眠 10s
-            av_usleep(2 * 1000);
+            //线程休眠 2s
+            usleep(2 * 1000 * 1000);
             continue;
         }
 
         //控制队列大小，避免生产快，消费满的情况
-        if (isPlaying && videoFrames.queueSize() > 100) {
-//            LOGE("视频队列中的 size :%d", videoFrames.queueSize());
+        if (isPlaying && frames.queueSize() > 100) {
+//            LOGE("视频队列中的 size :%d", frames.queueSize());
             //线程休眠等待队列中的数据被消费
             av_usleep(10 * 1000);//10s
             continue;
         }
 
-        int ret = videoPackages.pop(packet);
+        int ret = packages.pop(packet);
 
         //如果停止播放，跳出循环，出了循环，就要释放
         if (!isPlaying) {
@@ -144,7 +142,7 @@ void VideoChannel::video_decode() {
         }
 
         //解码后的视频数据 YUV,加入队列中
-        videoFrames.push(frame);
+        frames.push(frame);
     }
 
     //出循环，释放
@@ -199,11 +197,11 @@ void VideoChannel::video_player() {
 
         if (isStop) {
             //线程休眠 10s
-            av_usleep(2 * 1000);
+            usleep(2 * 1000 * 1000);
             continue;
         }
 
-        int ret = videoFrames.pop(frame);
+        int ret = frames.pop(frame);
 
         //如果停止播放，跳出循环，需要释放
         if (!isPlaying) {
@@ -234,7 +232,7 @@ void VideoChannel::video_player() {
         video_time = frame->best_effort_timestamp * av_q2d(this->base_time);
 
         //拿到音频播放的时间基
-        double_t audioTime = this->audio_time;
+        double_t audioTime = this->audioChannel->audio_time;
 
         //计算音频和视频的差值
         double av_time_diff = video_time - audioTime;
@@ -255,7 +253,7 @@ void VideoChannel::video_player() {
             if (av_time_diff < 0) {
                 LOGE("av_time_diff < 0 丢包处理：%f", av_time_diff);
                 //视频丢包处理
-                this->videoFrames.deleteVideoFrame();
+                this->frames.deleteVideoFrame();
                 continue;
             } else {
                 //完美
@@ -290,14 +288,14 @@ void VideoChannel::setRenderCallback(RenderCallback renderCallback) {
 }
 
 void VideoChannel::release() {
-    LOGD("Video_Channel ：%s","执行了销毁");
+    LOGD("Video_Channel ：%s", "执行了销毁");
     isPlaying = false;
-    if (videoFrames.queueSize() > 0) {
-        videoFrames.clearQueue();
+    if (frames.queueSize() > 0) {
+        frames.clearQueue();
     }
 
-    if (videoPackages.queueSize() > 0) {
-        videoPackages.clearQueue();
+    if (packages.queueSize() > 0) {
+        packages.clearQueue();
     }
 
 
@@ -305,6 +303,11 @@ void VideoChannel::release() {
 
 void VideoChannel::restart() {
     isStop = false;
+
+}
+
+void VideoChannel::setAudioChannel(AudioChannel *audioChannel) {
+    this->audioChannel = audioChannel;
 
 }
 

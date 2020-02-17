@@ -26,7 +26,7 @@ import static android.content.ContentValues.TAG;
 import static com.devyk.player_common.Constants.JavaPath;
 import static com.devyk.player_common.Constants.nativePath;
 
-public class MainActivity extends AppCompatActivity implements OnPreparedListener , OnProgressListener {
+public class MainActivity extends AppCompatActivity implements OnPreparedListener, OnProgressListener {
 
     private YKPlayer mYKPlayer;
     private ProgressDialog mProgressDialog;
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
     @Override
     protected void onResume() {
         super.onResume();
-        mYKPlayer.onRestart();
+//        mYKPlayer.onRestart();
     }
 
     @Override
@@ -117,11 +117,13 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
     protected void onDestroy() {
         super.onDestroy();
         mYKPlayer.release();
+        mYKPlayer = null;
     }
 
 
     /**
      * 拉流
+     *
      * @param view
      */
     public void pull(View view) {
@@ -140,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
 
     /**
      * Http 拉流
+     *
      * @param view
      */
     public void http(View view) {
@@ -158,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
 
     /**
      * 本地文件播放
+     *
      * @param view
      */
     public void local_play(View view) {
@@ -188,6 +192,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
 
     /**
      * 停止拉流
+     *
      * @param view
      */
     public void stop(View view) {
@@ -196,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
 
     /**
      * 恢复
+     *
      * @param view
      */
     public void restart(View view) {
@@ -204,18 +210,19 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
 
     /**
      * 销毁资源
+     *
      * @param view
      */
     public void release(View view) {
         mYKPlayer.release();
     }
+
     /**
      * JNI 回调会执行这里
      */
     @Override
     public void onPrepared() {
-        //数据准备好了，可以开始播放
-//        mYKPlayer.start();
+
         //获得时间
         final int duration = mYKPlayer.getDuration();
 
@@ -224,9 +231,12 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
             public void run() {
                 Toast.makeText(getApplicationContext(), "准备好了，开始播放", Toast.LENGTH_SHORT).show();
                 mProgressDialog.cancel();
-                if (duration != 0){
+                if (duration != 0) {
                     //显示进度条
                     seekBar.setVisibility(View.VISIBLE);
+                }else {
+                    //显示进度条
+                    seekBar.setVisibility(View.GONE);
                 }
             }
         });
@@ -252,18 +262,19 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
 
     /**
      * 播放进度
+     *
      * @param progress
      */
     @Override
     public void onProgress(final int progress) {
-        if (!isTouch){
+        if (!isTouch) {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     int duration = mYKPlayer.getDuration();
                     //如果是直播
                     if (duration != 0) {
-                        if (isSeek){
+                        if (isSeek) {
                             isSeek = false;
                             return;
                         }

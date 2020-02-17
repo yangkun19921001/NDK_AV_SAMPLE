@@ -154,16 +154,9 @@ Java_com_devyk_player_1common_PlayerManager_stopNative(JNIEnv *env, jclass type)
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_devyk_player_1common_PlayerManager_restartNative(JNIEnv *env, jclass type) {
-
     // TODO
     if (player) {
-        if (nativeWindow) {
-            ANativeWindow_release(nativeWindow);
-            nativeWindow = 0;
-        }
-
         player->restart();
-
     }
 
 }

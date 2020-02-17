@@ -308,6 +308,10 @@ void YKPlayer::release() {
         formatContext = 0;
     }
 
+    duration = 0;
+
+
+
 }
 
 void YKPlayer::restart() {

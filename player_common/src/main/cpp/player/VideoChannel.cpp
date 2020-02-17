@@ -13,7 +13,7 @@
 void dropAVFrame(queue<AVFrame *> &qq) {
     if (!qq.empty()) {
         AVFrame *frame = qq.front();
-        VideoChannel::releaseAVFrame(&frame);//释放掉
+        BaseChannel::releaseAVFrame(&frame);//释放掉
         qq.pop();
     }
 
@@ -27,9 +27,9 @@ void dropAVPacket(queue<AVPacket *> &qq) {
         AVPacket *packet = qq.front();
         //这里需要判断当前删除的是否是关键帧，不能删除关键帧不然不能解码了
         if (packet->flags != AV_PKT_FLAG_KEY) {
-            VideoChannel::releaseAVPacket(&packet);//释放掉
-            qq.pop();
+            BaseChannel::releaseAVPacket(&packet);//释放掉
         }
+        qq.pop();
     }
 }
 
@@ -85,6 +85,8 @@ void VideoChannel::start() {
     pthread_create(&pid_video_decode, 0, taskVideoDecodeThread, this);
     //2. 创建播放线程
     pthread_create(&pid_video_player, 0, taskVideoPlayerThread, this);
+
+
 }
 
 /**
@@ -95,7 +97,7 @@ void VideoChannel::video_decode() {
     while (isPlaying) {
         if (isStop) {
             //线程休眠 2s
-            usleep(2 * 1000 * 1000);
+//            usleep(2 * 1000 * 1000);
             continue;
         }
 
@@ -123,7 +125,8 @@ void VideoChannel::video_decode() {
         ret = avcodec_send_packet(pContext, packet);
         if (ret) {
             LOGD("ret %d", ret);
-            break;//失败了
+            release();//TODO --- 第二次播放会导致解码失败 目前不知道原因
+            break;//失败了 -1094995529
         }
 
         //释放 packet
@@ -197,7 +200,7 @@ void VideoChannel::video_player() {
 
         if (isStop) {
             //线程休眠 10s
-            usleep(2 * 1000 * 1000);
+//            usleep(2 * 1000 * 1000);
             continue;
         }
 
@@ -229,7 +232,7 @@ void VideoChannel::video_player() {
         double result_delay = extra_delay + base_delay;
 
         //拿到视频播放的时间基
-        video_time = frame->best_effort_timestamp * av_q2d(this->base_time);
+        this->video_time = frame->best_effort_timestamp * av_q2d(this->base_time);
 
         //拿到音频播放的时间基
         double_t audioTime = this->audioChannel->audio_time;
@@ -237,6 +240,8 @@ void VideoChannel::video_player() {
         //计算音频和视频的差值
         double av_time_diff = video_time - audioTime;
 
+        LOGE("av_time_diff init audioTime :%f, video：%f", this->audioChannel->audio_time,
+             video_time);
         //说明:
         //video_time > audioTime 说明视频快，音频慢，等待音频
         //video_time < audioTime 说明视频慢，音屏快，需要追赶音频，丢弃掉冗余的视频包也就是丢帧
@@ -244,20 +249,18 @@ void VideoChannel::video_player() {
             //通过睡眠的方式灵活等待
             if (av_time_diff > 1) {
                 av_usleep((result_delay * 2) * 1000000);
-                LOGE("av_time_diff >  1 睡眠:%d", (result_delay * 2) * 1000000);
+                LOGE("av_time_diff >  1 睡眠:%f", (result_delay * 2) * 1000000);
             } else {//说明相差不大
                 av_usleep((av_time_diff + result_delay) * 1000000);
                 LOGE("av_time_diff < 1 睡眠:%d", (av_time_diff + result_delay) * 1000000);
             }
+        } else if (av_time_diff < 0) {
+            //视频丢包处理
+            this->frames.deleteVideoFrame();
+            LOGE("av_time_diff <0  睡眠:%s，丢包:%f ，剩余包: %d", "不睡面", av_time_diff, frames.queueSize());
+            continue;
         } else {
-            if (av_time_diff < 0) {
-                LOGE("av_time_diff < 0 丢包处理：%f", av_time_diff);
-                //视频丢包处理
-                this->frames.deleteVideoFrame();
-                continue;
-            } else {
-                //完美
-            }
+            //完美
         }
 
         //开始渲染，显示屏幕上
@@ -288,8 +291,9 @@ void VideoChannel::setRenderCallback(RenderCallback renderCallback) {
 }
 
 void VideoChannel::release() {
-    LOGD("Video_Channel ：%s", "执行了销毁");
+    LOGE("av_time_diff release 睡眠 size :%d",frames.queueSize());
     isPlaying = false;
+    stop();
     if (frames.queueSize() > 0) {
         frames.clearQueue();
     }
@@ -297,6 +301,8 @@ void VideoChannel::release() {
     if (packages.queueSize() > 0) {
         packages.clearQueue();
     }
+
+    LOGE("av_time_diff release 睡眠 size :%d",frames.queueSize());
 
 
 }

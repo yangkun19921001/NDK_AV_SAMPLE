@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.yangkun19921001:YKCrash:1.0.2@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a83f8da6ab1feeec7a14268136c558e/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a83f8da6ab1feeec7a14268136c558e/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.yangkun19921001/YKCrash/1.0.2/dcf54dd8a95fa38f6faec0e043e294e11adfb7d6/YKCrash-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

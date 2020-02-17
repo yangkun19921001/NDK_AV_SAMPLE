@@ -37,6 +37,7 @@ public:
     ~SafeQueue() {
         pthread_mutex_destroy(&mutex);
         pthread_cond_destroy(&cond);
+        flag = false;
     }
 
     /**
@@ -133,7 +134,7 @@ public:
         pthread_mutex_lock(&mutex);
 
         //不做任何实现，需要的才去实现
-        DeleteFrameCallback(pp);
+        delFrameCallback(q);
 
         //释放锁
         pthread_mutex_unlock(&mutex);

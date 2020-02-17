@@ -126,6 +126,8 @@ void YKPlayer::prepare_() {
         //第七步 通过拿到的解码器，获取解码器上下文
         LOGD("第七步 通过拿到的解码器，获取解码器上下文");
         AVCodecContext *codecContext = avcodec_alloc_context3(codec);
+
+
         if (!codecContext) {
             pCallback->onErrorAction(THREAD_CHILD, FFMPEG_ALLOC_CODEC_CONTEXT_FAIL);
             return;
@@ -153,7 +155,7 @@ void YKPlayer::prepare_() {
         //第十步 从编码器参数中获取流类型 codec_type
         LOGD("第十步 从编码器参数中获取流类型 codec_type");
         if (codecParameters->codec_type == AVMEDIA_TYPE_AUDIO) {
-            audioChannel = new AudioChannel(stream_index, codecContext,baseTime);
+            audioChannel = new AudioChannel(stream_index, codecContext, baseTime);
         } else if (codecParameters->codec_type == AVMEDIA_TYPE_VIDEO) {
             //获取视频帧 fps
             //平均帧率 == 时间基
@@ -205,7 +207,7 @@ void YKPlayer::start_() {
     // 循环 读音视频包
     while (isPlaying) {
         if (isStop) {
-            usleep(2 * 1000 * 1000);
+//            usleep(2 * 1000 * 1000);
             continue;
         }
         LOGD("start_");
@@ -232,21 +234,23 @@ void YKPlayer::start_() {
                }*/
         if (!ret) {
             if (videoChannel && videoChannel->stream_index == packet->stream_index) {//视频包
+                LOGE("stream_index 视频 %s", "push");
                 //未解码的 视频数据包 加入队列
                 videoChannel->packages.push(packet);
             } else if (audioChannel && audioChannel->stream_index == packet->stream_index) {//语音包
+                LOGE("stream_index 音频 %s", "push");
                 //将语音包加入到队列中，以供解码使用
                 audioChannel->packages.push(packet);
             }
         } else if (ret == AVERROR_EOF) { //代表读取完毕了
             //TODO----
-            LOGD("拆包完成 %s", "读取完成了")
+            LOGE("stream_index 拆包完成 %s", "读取完成了");
             isPlaying = 0;
             stop();
             release();
             break;
         } else {
-            LOGD("拆包 %s", "读取失败")
+            LOGE("stream_index 拆包 %s", "读取失败");
             break;//读取失败
         }
     }//end while
@@ -270,11 +274,17 @@ void YKPlayer::stop() {
 }
 
 void YKPlayer::release() {
-    LOGD("YKPlayer ：%s","执行了销毁");
+    LOGD("YKPlayer ：%s", "执行了销毁");
     isPlaying = false;
     stop();
     videoChannel->release();
     audioChannel->release();
+
+    if (codecContext)
+        avcodec_free_context(&codecContext);
+
+    if (formatContext)
+        avformat_free_context(formatContext);
 
 }
 

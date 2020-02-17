@@ -22,14 +22,14 @@ public:
         this->stream_index = stream_index;
         this->pContext = pContext;
         this->base_time = av_base_time;
-//        packages.setReleaseCallback(releaseAVPacket);
-//        frames.setReleaseCallback(releaseAVFrame);
+        packages.setReleaseCallback(releaseAVPacket);
+        frames.setReleaseCallback(releaseAVFrame);
     }
 
     // 注意：由于是父类，析构函数，必须是虚函数
     virtual ~BaseChannel() {
-//        packages.clearQueue();
-//        frames.clearQueue();
+        packages.clearQueue();
+        frames.clearQueue();
     }
 
     /**

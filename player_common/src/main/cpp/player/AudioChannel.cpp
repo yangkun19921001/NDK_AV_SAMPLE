@@ -39,6 +39,8 @@ AudioChannel::AudioChannel(int stream_index,
     //初始化上下文
     swr_init(swr_ctx);
 
+
+    LOGE("AudioChannel---");
 }
 
 /**
@@ -104,7 +106,7 @@ void AudioChannel::audio_decode() {
 
         if (isStop) {
             //线程休眠 10s
-            av_usleep(2 * 1000);
+//            av_usleep(2 * 1000);
             continue;
         }
 
@@ -168,7 +170,7 @@ int AudioChannel::getPCM() {
 
         if (isStop) {
             //线程休眠 10s
-            av_usleep(2 * 1000);
+//            av_usleep(2 * 1000);
             continue;
         }
 
@@ -204,7 +206,7 @@ int AudioChannel::getPCM() {
 
         pcm_data_size = ret * out_sample_size * out_channels;
 
-       //用于音视频同步
+        //用于音视频同步
         audio_time = pcmFrame->best_effort_timestamp * av_q2d(this->base_time);
         break;
     }
@@ -341,7 +343,11 @@ void AudioChannel::audio_player() {
  * 释放动作
  */
 void AudioChannel::release() {
-    LOGD("AudioChannel ：%s","执行了销毁");
+    LOGE("AudioChannel ：%s", "执行了销毁");
+    //5. 设置暂停播放标志
+    isPlaying = false;
+    isStop = true;
+
     //1. 设置停止状态
     if (bqPlayerPlay) {
         (*bqPlayerPlay)->SetPlayState(bqPlayerPlay, SL_PLAYSTATE_STOPPED);
@@ -363,9 +369,7 @@ void AudioChannel::release() {
         (*engineObject)->Destroy(engineObject);
         engineObject = 0;
     }
-    //5. 设置暂停播放标志
-    isPlaying = false;
-    isStop = true;
+
 
     if (frames.queueSize() > 0) {
         frames.clearQueue();
@@ -374,6 +378,11 @@ void AudioChannel::release() {
     if (packages.queueSize() > 0) {
         packages.clearQueue();
     }
+    if (out_buffers) {
+        free(out_buffers);
+        out_buffers = 0;
+    }
+
 
 }
 

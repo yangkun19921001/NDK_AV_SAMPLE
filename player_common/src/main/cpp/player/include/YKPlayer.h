@@ -57,6 +57,8 @@ private:
     bool isStop;
 
     RenderCallback renderCallback;
+
+    AVCodecContext *codecContext = 0;
 };
 
 

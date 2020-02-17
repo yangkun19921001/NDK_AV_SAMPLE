@@ -40,6 +40,13 @@ public:
 
     bool isPlaying;
 
+
+    int getDuration() {
+        return duration;
+    }
+
+    void seek(int i);
+
 private:
     char *data_source = 0;
     pthread_t pid_prepare;
@@ -59,6 +66,13 @@ private:
     RenderCallback renderCallback;
 
     AVCodecContext *codecContext = 0;
+
+    pthread_mutex_t seekMutex;
+
+    int duration = 0;
+
+    bool isSeek = 0;
+
 };
 
 

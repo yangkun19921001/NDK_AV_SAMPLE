@@ -21,7 +21,7 @@ extern "C" {
 class AudioChannel : public BaseChannel {
 public:
     AudioChannel(int stream_index,
-                 AVCodecContext *pContext,AVRational);
+                 AVCodecContext *pContext, AVRational, JNICallback *jniCallback);
 
     ~AudioChannel();
 
@@ -48,7 +48,6 @@ public:
     void restart();
 
 
-
 private:
     // 线程ID
     pthread_t pid_audio_decode;
@@ -68,8 +67,6 @@ private:
     SLAndroidSimpleBufferQueueItf bqPlayerBufferQueue;
 
     SwrContext *swr_ctx;
-
-
 
 
 };

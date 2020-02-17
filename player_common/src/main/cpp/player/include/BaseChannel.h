@@ -10,6 +10,7 @@ extern "C" {
 
 #include "safe_queue.h"
 #include "Constants.h"
+#include "JNICallback.h"
 
 /**
  * Video & Audio 通道抽出的父类
@@ -18,12 +19,14 @@ class BaseChannel {
 public:
     int stream_index;
 
-    BaseChannel(int stream_index, AVCodecContext *pContext,AVRational av_base_time) {
+    BaseChannel(int stream_index, AVCodecContext *pContext,AVRational av_base_time,JNICallback* jniCallback) {
         this->stream_index = stream_index;
         this->pContext = pContext;
         this->base_time = av_base_time;
+        this->javaCallHelper = jniCallback;
         packages.setReleaseCallback(releaseAVPacket);
         frames.setReleaseCallback(releaseAVFrame);
+
     }
 
     // 注意：由于是父类，析构函数，必须是虚函数
@@ -61,11 +64,21 @@ public:
     SafeQueue<AVFrame *> frames; // 音频 或者 视频 的原始数据包（可以直接 渲染 和 播放 的）
 
 
+    void clear() {
+        packages.clearQueue();
+        frames.clearQueue();
+    }
+
+
+
+
 
     bool isPlaying = 1;
     bool isStop = false;
 
     AVCodecContext *pContext;
+
+    JNICallback * javaCallHelper;
 
 //###############下面是音视频同步需要用到的
     //FFmpeg 时间基: 内部时间

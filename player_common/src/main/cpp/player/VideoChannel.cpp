@@ -34,8 +34,9 @@ void dropAVPacket(queue<AVPacket *> &qq) {
 }
 
 
-VideoChannel::VideoChannel(int stream, AVCodecContext *pContext, AVRational rational, int fpsValue)
-        : BaseChannel(stream, pContext, rational) {
+VideoChannel::VideoChannel(int stream, AVCodecContext *pContext, AVRational rational, int fpsValue,
+                           JNICallback *jniCallback)
+        : BaseChannel(stream, pContext, rational, jniCallback) {
     this->fpsValue = fpsValue;
     this->frames.setDeleteVideoFrameCallback(dropAVFrame);
     this->packages.setDeleteVideoFrameCallback(dropAVPacket);
@@ -81,6 +82,7 @@ void VideoChannel::start() {
     //存放解码后的队列开始工作了
     frames.setFlag(1);
 
+
     //1. 创建解码线程
     pthread_create(&pid_video_decode, 0, taskVideoDecodeThread, this);
     //2. 创建播放线程
@@ -88,6 +90,7 @@ void VideoChannel::start() {
 
 
 }
+
 
 /**
  * 视频解码
@@ -263,6 +266,12 @@ void VideoChannel::video_player() {
             //完美
         }
 
+
+        //diff太大了不回调了
+        if (javaCallHelper && !audioChannel) {
+            javaCallHelper->onProgress(THREAD_CHILD, video_time);
+        }
+
         //开始渲染，显示屏幕上
         //渲染一帧图像(宽、高、数据)
         renderCallback(dst_data[0], pContext->width, pContext->height, dst_linesize[0]);
@@ -282,6 +291,8 @@ void VideoChannel::video_player() {
  */
 void VideoChannel::stop() {
     isStop = true;
+    if (javaCallHelper)
+        javaCallHelper = 0;
 }
 
 
@@ -291,7 +302,7 @@ void VideoChannel::setRenderCallback(RenderCallback renderCallback) {
 }
 
 void VideoChannel::release() {
-    LOGE("av_time_diff release 睡眠 size :%d",frames.queueSize());
+    LOGE("av_time_diff release 睡眠 size :%d", frames.queueSize());
     isPlaying = false;
     stop();
     if (frames.queueSize() > 0) {
@@ -302,7 +313,7 @@ void VideoChannel::release() {
         packages.clearQueue();
     }
 
-    LOGE("av_time_diff release 睡眠 size :%d",frames.queueSize());
+    LOGE("av_time_diff release 睡眠 size :%d", frames.queueSize());
 
 
 }

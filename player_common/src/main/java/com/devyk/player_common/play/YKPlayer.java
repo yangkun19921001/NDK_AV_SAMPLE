@@ -9,6 +9,13 @@ import android.view.SurfaceView;
 import com.devyk.player_common.Constants;
 import com.devyk.player_common.PlayerManager;
 import com.devyk.player_common.callback.OnPreparedListener;
+import com.devyk.player_common.callback.OnProgressListener;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <pre>
@@ -22,6 +29,9 @@ import com.devyk.player_common.callback.OnPreparedListener;
 public class YKPlayer implements SurfaceHolder.Callback {
     private String TAG = this.getClass().getSimpleName();
 
+    Executor executor;
+    ExecutorService executorService;
+
     /**
      * 播放源（文件路径、直播源）
      */
@@ -31,6 +41,10 @@ public class YKPlayer implements SurfaceHolder.Callback {
 
     public YKPlayer() {
         Log.d(TAG, "Player 空参");
+    }
+
+    public  ExecutorService newFixThreadPool(int nThreads){
+        return new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
     }
 
 
@@ -113,4 +127,33 @@ public class YKPlayer implements SurfaceHolder.Callback {
     }
 
 
+    /**
+     * 设置播放回调
+     */
+    public void setOnPreparedListener(OnPreparedListener onPreparedListener) {
+        PlayerManager.getInstance().setOnPreparedListener(onPreparedListener);
+    }
+
+
+    /**
+     * 设置播放进度回调
+     */
+    public void setOnProgressListener(OnProgressListener onProgressListener) {
+        PlayerManager.getInstance().setOnProgressListener(onProgressListener);
+    }
+
+
+    public int getDuration() {
+        return PlayerManager.getInstance().native_GetDuration();
+    }
+
+    public void seek(final int progress) {
+
+        newFixThreadPool(5).submit(new Runnable() {
+            @Override
+            public void run() {
+                PlayerManager.getInstance().native_seek(progress);
+            }
+        });
+    }
 }

@@ -9,8 +9,9 @@
 
 
 AudioChannel::AudioChannel(int stream_index,
-                           AVCodecContext *pContext, AVRational avRational)
-        : BaseChannel(stream_index, pContext, avRational) {
+                           AVCodecContext *pContext, AVRational avRational,
+                           JNICallback *jniCallback)
+        : BaseChannel(stream_index, pContext, avRational, jniCallback) {
 
 
     //初始化 缓冲区 out_buffers
@@ -69,31 +70,6 @@ AudioChannel::~AudioChannel() {
 
 }
 
-/**
- * 停止播放
- */
-void AudioChannel::stop() {
-    isStop = true;
-}
-
-/**
- * 开始播放
- */
-void AudioChannel::start() {
-    //设置正在播放的标志
-    isPlaying = true;
-    //存放为解码的队列开始工作了
-    packages.setFlag(1);
-
-    //存放解码后的队列开始工作了
-    frames.setFlag(1);
-
-    //1. 解码线程
-    pthread_create(&pid_audio_decode, 0, thread_audio_decode, this);
-    //2. 渲染线程
-    pthread_create(&pid_audio_player, 0, thread_audio_player, this);
-
-}
 
 /**
  * 音频解码
@@ -208,10 +184,16 @@ int AudioChannel::getPCM() {
 
         //用于音视频同步
         audio_time = pcmFrame->best_effort_timestamp * av_q2d(this->base_time);
+
+        if (javaCallHelper) {
+            javaCallHelper->onProgress(THREAD_CHILD, audio_time);
+        }
         break;
     }
     //渲染完成释放资源
     releaseAVFrame(&pcmFrame);
+
+
     return pcm_data_size;
 }
 
@@ -339,6 +321,37 @@ void AudioChannel::audio_player() {
 
 }
 
+
+/**
+ * 停止播放
+ */
+void AudioChannel::stop() {
+    isStop = true;
+
+    if (javaCallHelper)
+        javaCallHelper = 0;
+}
+
+/**
+ * 开始播放
+ */
+void AudioChannel::start() {
+    //设置正在播放的标志
+    isPlaying = true;
+    //存放为解码的队列开始工作了
+    packages.setFlag(1);
+
+    //存放解码后的队列开始工作了
+    frames.setFlag(1);
+
+
+    //1. 解码线程
+    pthread_create(&pid_audio_decode, 0, thread_audio_decode, this);
+    //2. 渲染线程
+    pthread_create(&pid_audio_player, 0, thread_audio_player, this);
+
+}
+
 /**
  * 释放动作
  */
@@ -378,6 +391,7 @@ void AudioChannel::release() {
     if (packages.queueSize() > 0) {
         packages.clearQueue();
     }
+
     if (out_buffers) {
         free(out_buffers);
         out_buffers = 0;

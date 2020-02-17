@@ -35,6 +35,7 @@ YKPlayer::YKPlayer(const char *dataSource, JNICallback *pCallback) {
     this->data_source = new char[strlen(dataSource) + 1];
     strcpy(this->data_source, dataSource);
     this->pCallback = pCallback;
+    duration = 0;
 }
 
 YKPlayer::~YKPlayer() {
@@ -100,6 +101,12 @@ void YKPlayer::prepare_() {
             return;
         }
     }
+
+    //视频时长（单位：微秒us，转换为秒需要除以1000000）
+
+    duration = formatContext->duration == 0 ? 0 : formatContext->duration / 1000000;
+
+    LOGE("进度 formatContext->duration:%f, duration=%f", formatContext->duration, duration);
     //第三步 根据流信息，流的个数，循环查找，音频流 视频流
     LOGD("第三步 根据流信息，流的个数，循环查找，音频流 视频流");
     //nb_streams = 流的个数
@@ -155,13 +162,14 @@ void YKPlayer::prepare_() {
         //第十步 从编码器参数中获取流类型 codec_type
         LOGD("第十步 从编码器参数中获取流类型 codec_type");
         if (codecParameters->codec_type == AVMEDIA_TYPE_AUDIO) {
-            audioChannel = new AudioChannel(stream_index, codecContext, baseTime);
+            audioChannel = new AudioChannel(stream_index, codecContext, baseTime, pCallback);
         } else if (codecParameters->codec_type == AVMEDIA_TYPE_VIDEO) {
             //获取视频帧 fps
             //平均帧率 == 时间基
             AVRational frame_rate = stream->avg_frame_rate;
             int fps_value = av_q2d(frame_rate);
-            videoChannel = new VideoChannel(stream_index, codecContext, baseTime, fps_value);
+            videoChannel = new VideoChannel(stream_index, codecContext, baseTime, fps_value,
+                                            pCallback);
             videoChannel->setRenderCallback(renderCallback);
         }
     }//end for
@@ -268,8 +276,15 @@ void YKPlayer::setRenderCallback(RenderCallback renderCallback) {
 void YKPlayer::stop() {
     //停止
     isStop = true;
-    videoChannel->stop();
-    audioChannel->stop();
+
+    if (videoChannel)
+        videoChannel->stop();
+    if (audioChannel)
+        audioChannel->stop();
+    if (videoChannel)
+        videoChannel->javaCallHelper = 0;
+    if (audioChannel)
+        audioChannel->javaCallHelper = 0;
 
 }
 
@@ -277,19 +292,68 @@ void YKPlayer::release() {
     LOGD("YKPlayer ：%s", "执行了销毁");
     isPlaying = false;
     stop();
-    videoChannel->release();
-    audioChannel->release();
+    if (videoChannel)
+        videoChannel->release();
+    if (audioChannel)
+        audioChannel->release();
 
-    if (codecContext)
+    if (codecContext) {
         avcodec_free_context(&codecContext);
+        codecContext = 0;
+    }
 
-    if (formatContext)
+
+    if (formatContext) {
         avformat_free_context(formatContext);
+        formatContext = 0;
+    }
 
 }
 
 void YKPlayer::restart() {
     isStop = false;
-    videoChannel->restart();
-    audioChannel->restart();
+    if (videoChannel)
+        videoChannel->restart();
+    if (audioChannel)
+        audioChannel->restart();
+}
+
+
+/**
+ * 控制播放
+ * @param i
+ */
+void YKPlayer::seek(int i) {
+    //进去必须 在0- duration 范围之类
+    if (i < 0 || i >= duration) {
+        return;
+    }
+
+    if (!audioChannel && !videoChannel) {
+        return;
+    }
+    if (!formatContext) {
+        return;
+    }
+
+    isSeek = 1;
+    pthread_mutex_lock(&seekMutex);
+    //单位是 微妙
+    int64_t seek = i * 1000000;
+    //seek到请求的时间 之前最近的关键帧
+    // 只有从关键帧才能开始解码出完整图片
+    av_seek_frame(formatContext, -1, seek, AVSEEK_FLAG_BACKWARD);
+//    avformat_seek_file(formatContext, -1, INT64_MIN, seek, INT64_MAX, 0);
+    // 音频、与视频队列中的数据 是不是就可以丢掉了？
+    if (audioChannel) {
+        //可以清空缓存
+        audioChannel->clear();
+        //启动队列
+    }
+    if (videoChannel) {
+        videoChannel->clear();
+    }
+    pthread_mutex_unlock(&seekMutex);
+    isSeek = 0;
+
 }

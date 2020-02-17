@@ -156,7 +156,7 @@ JNIEXPORT void JNICALL
 Java_com_devyk_player_1common_PlayerManager_restartNative(JNIEnv *env, jclass type) {
 
     // TODO
-    if (player){
+    if (player) {
         if (nativeWindow) {
             ANativeWindow_release(nativeWindow);
             nativeWindow = 0;
@@ -192,4 +192,23 @@ Java_com_devyk_player_1common_PlayerManager_isPlayerNative(JNIEnv *env, jclass t
     return isPlay;
 }
 
+extern "C"
+JNIEXPORT jint JNICALL
+Java_com_devyk_player_1common_PlayerManager_native_1GetDuration(JNIEnv *env, jobject instance) {
 
+    if (player) {
+        return player->getDuration();
+    }
+    return 0;
+
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_devyk_player_1common_PlayerManager_native_1seek(JNIEnv *env, jobject instance,
+                                                         jint progress) {
+
+    if (player) {
+        player->seek(progress); //不需要转换 jint -> int
+    }
+
+}

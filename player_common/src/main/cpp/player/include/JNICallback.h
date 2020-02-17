@@ -18,6 +18,7 @@ public:
      //回调
      void onPrepared(int thread_mode);
      void onErrorAction(int thread_mode,int error_code);
+    void onProgress(int thread, int progress);
 
     //析构函数声明
     ~JNICallback();
@@ -30,6 +31,7 @@ private:
     //相当于反射拿到 Java 函数
     jmethodID jmd_repared;
     jmethodID jmd_error;
+    jmethodID jmid_progress;
 };
 
 

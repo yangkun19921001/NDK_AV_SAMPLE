@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.Surface;
 
 import com.devyk.player_common.callback.OnPreparedListener;
+import com.devyk.player_common.callback.OnProgressListener;
 
 import java.io.File;
 
@@ -41,6 +42,8 @@ public class PlayerManager {
     }
 
     private OnPreparedListener mOnPreparedListener;
+
+    private OnProgressListener onProgressListener;
 
     /**
      * 当前 ffmpeg 版本
@@ -85,6 +88,18 @@ public class PlayerManager {
      */
     public native boolean isPlayerNative();
 
+    /**
+     * 获取播放的 时间
+     * @return
+     */
+    public native int native_GetDuration();
+
+    /**
+     * 拖动播放
+     * @param progress
+     */
+    public native void native_seek(int progress);
+
 
     /**
      * 给 JNI 方法调用
@@ -92,6 +107,16 @@ public class PlayerManager {
     public void onPrepared() {
         if (null != mOnPreparedListener)
             mOnPreparedListener.onPrepared();
+    }
+
+    /**
+     * native 回调给java 播放进去的
+     * @param progress
+     */
+    public void onProgress(int progress) {
+        if (null != onProgressListener) {
+            onProgressListener.onProgress(progress);
+        }
     }
 
     /**
@@ -135,6 +160,10 @@ public class PlayerManager {
      */
     public void setOnPreparedListener(OnPreparedListener onPreparedListener) {
         mOnPreparedListener = onPreparedListener;
+    }
+
+    public void setOnProgressListener(OnProgressListener onProgressListener) {
+        this.onProgressListener = onProgressListener;
     }
 
 

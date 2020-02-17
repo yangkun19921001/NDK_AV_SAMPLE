@@ -20,7 +20,7 @@ typedef void (*RenderCallback)(uint8_t *, int, int, int);
 class VideoChannel : public BaseChannel {
 
 public:
-    VideoChannel(int stream_index, AVCodecContext *pContext, AVRational, int);
+    VideoChannel(int stream_index, AVCodecContext *pContext, AVRational, int,JNICallback* jniCallback);
 
     ~VideoChannel();
 
@@ -50,6 +50,8 @@ private:
     int fpsValue;//视频 fps
 
     AudioChannel* audioChannel = 0;
+
+
 
 };
 

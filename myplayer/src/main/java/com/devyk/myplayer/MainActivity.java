@@ -9,6 +9,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.devyk.crash_module.Crash;
@@ -16,6 +17,7 @@ import com.devyk.crash_module.inter.JavaCrashUtils;
 import com.devyk.player_common.Constants;
 import com.devyk.player_common.PlayerManager;
 import com.devyk.player_common.callback.OnPreparedListener;
+import com.devyk.player_common.callback.OnProgressListener;
 import com.devyk.player_common.play.YKPlayer;
 
 import java.io.File;
@@ -24,10 +26,15 @@ import static android.content.ContentValues.TAG;
 import static com.devyk.player_common.Constants.JavaPath;
 import static com.devyk.player_common.Constants.nativePath;
 
-public class MainActivity extends AppCompatActivity implements OnPreparedListener {
+public class MainActivity extends AppCompatActivity implements OnPreparedListener , OnProgressListener {
 
     private YKPlayer mYKPlayer;
     private ProgressDialog mProgressDialog;
+    private SeekBar seekBar;
+
+    private boolean isSeek;
+    private int progress;
+    private boolean isTouch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +43,15 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
         Toast.makeText(getApplicationContext(), "当前 FFmpeg 版本:" + PlayerManager.getInstance().getFFmpegVersion(), Toast.LENGTH_SHORT).show();
 
         SurfaceView mSurView = findViewById(R.id.sf_player);
+        seekBar = findViewById(R.id.seekBar);
 
         mYKPlayer = new YKPlayer();
 
         mYKPlayer.setSurfaceView(mSurView);
-        PlayerManager.getInstance().setOnPreparedListener(this);
 
+        mYKPlayer.setOnPreparedListener(this);
+
+        mYKPlayer.setOnProgressListener(this);
 
         if (!new File(nativePath).exists()) {
             new File(nativePath).mkdirs();
@@ -60,6 +70,28 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
                     }
                 })
                 .build();
+
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                isTouch = true;
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                isSeek = true;
+                isTouch = false;
+                progress = mYKPlayer.getDuration() * seekBar.getProgress() / 100;
+                //进度调整
+                mYKPlayer.seek(progress);
+            }
+        });
 
     }
 
@@ -184,11 +216,18 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
     public void onPrepared() {
         //数据准备好了，可以开始播放
 //        mYKPlayer.start();
+        //获得时间
+        final int duration = mYKPlayer.getDuration();
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 Toast.makeText(getApplicationContext(), "准备好了，开始播放", Toast.LENGTH_SHORT).show();
                 mProgressDialog.cancel();
+                if (duration != 0){
+                    //显示进度条
+                    seekBar.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -211,4 +250,29 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
     }
 
 
+    /**
+     * 播放进度
+     * @param progress
+     */
+    @Override
+    public void onProgress(final int progress) {
+        if (!isTouch){
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    int duration = mYKPlayer.getDuration();
+                    //如果是直播
+                    if (duration != 0) {
+                        if (isSeek){
+                            isSeek = false;
+                            return;
+                        }
+                        //更新进度 计算比例
+                        seekBar.setProgress(progress * 100 / duration);
+                    }
+                }
+            });
+        }
+
+    }
 }

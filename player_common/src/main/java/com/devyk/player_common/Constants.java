@@ -21,8 +21,8 @@ public class Constants {
     //Http MP4 文件
     public static final String MP4_PLAY = "http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4";
     //本地视频文件
-//    public static final String LOCAL_FILE = Environment.getExternalStorageDirectory() + "/news.mov";
-    public static final String LOCAL_FILE = Environment.getExternalStorageDirectory() + "/zhangjie_mo.mov";
+    public static final String LOCAL_FILE = Environment.getExternalStorageDirectory() + "/news.mov";
+//    public static final String LOCAL_FILE = Environment.getExternalStorageDirectory() + "/zhangjie_mo.mov";
 
     public static final String nativePath = Environment.getExternalStorageDirectory() + "/NDKCrash";
     public static final String JavaPath = Environment.getExternalStorageDirectory() + "/JavaCrash";

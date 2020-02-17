@@ -1,7 +1,7 @@
 //include
 include ':myplayer', ':audio_video',
-        ':player_common',
-        ':app',
-        ':mk_application',
-        ':cmake_application',
-        ':ffmpeg'
+        ':player_common'
+//        ':app',
+//        ':mk_application',
+//        ':cmake_application',
+//        ':ffmpeg'

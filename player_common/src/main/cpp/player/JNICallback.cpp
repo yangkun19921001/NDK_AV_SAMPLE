@@ -16,11 +16,11 @@ JNICallback::JNICallback(JavaVM *javaVM, JNIEnv *env, jobject instance) {
     //声明 Java onPrepared/onError 回调签名
     const char *sigPre = "()V"; //空参无返回值
     const char *sigErr = "(I)V"; //Int 参数，无返回值
+    const char *sigPro = "(I)V"; //Int 参数，无返回值
 
     this->jmd_repared = env->GetMethodID(mYKPlayClass, "onPrepared", sigPre);
     this->jmd_error = env->GetMethodID(mYKPlayClass, "onError", sigErr);
-
-
+    this->jmid_progress = env->GetMethodID(mYKPlayClass, "onProgress", sigPro);
 }
 
 
@@ -58,6 +58,22 @@ void JNICallback::onErrorAction(int thread_mode, int error_code) {
 
 
 }
+
+
+void JNICallback::onProgress(int thread, int progress) {
+    if (thread == THREAD_CHILD) {
+        JNIEnv *jniEnv = nullptr;
+        if (javaVM->AttachCurrentThread(&jniEnv, 0) != JNI_OK) {
+            return;
+        }
+        jniEnv->CallVoidMethod(this->instance, jmid_progress, progress);
+        javaVM->DetachCurrentThread();
+    } else {
+        env->CallVoidMethod(this->instance, jmid_progress, progress);
+    }
+}
+
+
 
 /**
  * 析构函数：专门完成释放的工作

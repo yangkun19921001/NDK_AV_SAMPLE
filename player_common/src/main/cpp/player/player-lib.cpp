@@ -46,6 +46,8 @@ void renderFrame(uint8_t *src_data, int width, int height, int src_size) {
 
     if (!nativeWindow) {
         pthread_mutex_unlock(&mutex);
+        nativeWindow = 0;
+        return;
     }
 
     //设置窗口属性

@@ -111,6 +111,7 @@ void YKPlayer::prepare_() {
     LOGD("第三步 根据流信息，流的个数，循环查找，音频流 视频流");
     //nb_streams = 流的个数
     for (int stream_index = 0; stream_index < formatContext->nb_streams; ++stream_index) {
+
         //第四步 获取媒体流 音视频
         LOGD("第四步 获取媒体流 音视频");
         AVStream *stream = formatContext->streams[stream_index];
@@ -214,6 +215,12 @@ void YKPlayer::start() {
 void YKPlayer::start_() {
     // 循环 读音视频包
     while (isPlaying) {
+
+        if (!formatContext){
+            LOGE("formatContext :%s","formatContext 已经被释放了");
+            return;
+        }
+
         if (isStop) {
 //            usleep(2 * 1000 * 1000);
             continue;
@@ -235,6 +242,7 @@ void YKPlayer::start_() {
 
         //AVPacket 可能是音频 可能是视频，没有解码的数据包
         AVPacket *packet = av_packet_alloc();
+
         //这一行执行完毕， packet 就有音视频数据了
         int ret = av_read_frame(formatContext, packet);
         /*       if (ret != 0) {
@@ -274,17 +282,22 @@ void YKPlayer::setRenderCallback(RenderCallback renderCallback) {
 }
 
 void YKPlayer::stop() {
-    //停止
+
     isStop = true;
 
-    if (videoChannel)
+    if (videoChannel) {
         videoChannel->stop();
-    if (audioChannel)
+    }
+    if (audioChannel) {
         audioChannel->stop();
-    if (videoChannel)
+    }
+    if (videoChannel) {
         videoChannel->javaCallHelper = 0;
-    if (audioChannel)
+    }
+    if (audioChannel) {
         audioChannel->javaCallHelper = 0;
+    }
+
 
 }
 
@@ -309,7 +322,6 @@ void YKPlayer::release() {
     }
 
     duration = 0;
-
 
 
 }
@@ -341,7 +353,8 @@ void YKPlayer::seek(int i) {
     }
 
     isSeek = 1;
-    pthread_mutex_lock(&seekMutex);
+    //TODO ---
+//    pthread_mutex_lock(&seekMutex);
     //单位是 微妙
     int64_t seek = i * 1000000;
     //seek到请求的时间 之前最近的关键帧
@@ -357,7 +370,7 @@ void YKPlayer::seek(int i) {
     if (videoChannel) {
         videoChannel->clear();
     }
-    pthread_mutex_unlock(&seekMutex);
+//    pthread_mutex_unlock(&seekMutex);
     isSeek = 0;
 
 }

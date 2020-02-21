@@ -14,6 +14,7 @@ import android.os.Environment;
 public class Constants {
     //湖南卫视
     public static final String HUNAN_PATH = "rtmp://58.200.131.2:1935/livetv/hunantv";
+//    public static final String HUNAN_PATH = "rtmp://49.235.159.44:1992/devyk/1234";
     //HTTP 拉流
     public static final String HTTP_PATH = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8";
     //rtsp 拉流--》测试暂时播放不成功

@@ -274,7 +274,8 @@ void VideoChannel::video_player() {
 
         //开始渲染，显示屏幕上
         //渲染一帧图像(宽、高、数据)
-        renderCallback(dst_data[0], pContext->width, pContext->height, dst_linesize[0]);
+        if (renderCallback && pContext)
+            renderCallback(dst_data[0], pContext->width, pContext->height, dst_linesize[0]);
         releaseAVFrame(&frame);//渲染完了，frame 释放。
 
 
@@ -312,7 +313,9 @@ void VideoChannel::release() {
     if (packages.queueSize() > 0) {
         packages.clearQueue();
     }
-
+    if (renderCallback) {
+        renderCallback = 0;
+    }
     LOGE("av_time_diff release 睡眠 size :%d", frames.queueSize());
 
 

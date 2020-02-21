@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
     @Override
     protected void onStop() {
         super.onStop();
-        mYKPlayer.stop();
+//        mYKPlayer.stop();
     }
 
     @Override
@@ -231,6 +231,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
             public void run() {
                 Toast.makeText(getApplicationContext(), "准备好了，开始播放", Toast.LENGTH_SHORT).show();
                 mProgressDialog.cancel();
+                //TODO-----会导致画面显示异常
                 if (duration != 0) {
                     //显示进度条
                     seekBar.setVisibility(View.VISIBLE);
@@ -267,6 +268,10 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
      */
     @Override
     public void onProgress(final int progress) {
+
+        //TODO-----会导致画面显示异常，之后解决
+
+
         if (!isTouch) {
             runOnUiThread(new Runnable() {
                 @Override

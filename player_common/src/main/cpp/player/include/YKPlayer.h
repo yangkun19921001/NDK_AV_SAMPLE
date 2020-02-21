@@ -61,7 +61,7 @@ private:
 
     pthread_t pid_start;
 
-    bool isStop;
+    bool isStop = false;
 
     RenderCallback renderCallback;
 

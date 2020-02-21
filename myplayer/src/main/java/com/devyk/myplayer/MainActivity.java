@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
     @Override
     protected void onResume() {
         super.onResume();
-//        mYKPlayer.onRestart();
+        mYKPlayer.onRestart();
     }
 
     @Override
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements OnPreparedListene
     @Override
     protected void onStop() {
         super.onStop();
-//        mYKPlayer.stop();
+        mYKPlayer.stop();
     }
 
     @Override

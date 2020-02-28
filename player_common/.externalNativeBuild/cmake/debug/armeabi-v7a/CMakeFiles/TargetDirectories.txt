@@ -1,3 +1,0 @@
-/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
-/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-/Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/YK_PLAYER.dir

@@ -1,3 +1,0 @@
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/devyk/Data/Project/sample/github_code/ndk_sample/player_common/.externalNativeBuild/cmake/debug/armeabi-v7a

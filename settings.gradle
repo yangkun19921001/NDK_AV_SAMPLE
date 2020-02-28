@@ -1,6 +1,6 @@
 //include
-include ':myplayer', ':audio_video',
-        ':player_common'
+include ':ykav_sample', ':audio_video',
+        ':ykav_common'
 //        ':app',
 //        ':mk_application',
 //        ':cmake_application',

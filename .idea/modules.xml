@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/audio_video/audio_video.iml" filepath="$PROJECT_DIR$/audio_video/audio_video.iml" />
-      <module fileurl="file://$PROJECT_DIR$/myplayer/myplayer.iml" filepath="$PROJECT_DIR$/myplayer/myplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ndk_sample.iml" filepath="$PROJECT_DIR$/ndk_sample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/player_common/player_common.iml" filepath="$PROJECT_DIR$/player_common/player_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ykav_common/ykav_common.iml" filepath="$PROJECT_DIR$/ykav_common/ykav_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ykav_sample/ykav_sample.iml" filepath="$PROJECT_DIR$/ykav_sample/ykav_sample.iml" />
     </modules>
   </component>
 </project>

@@ -81,11 +81,11 @@ target_link_libraries(
 target_link_libraries(
         #播放 so
         ykpusher
-        # 写了此命令不用在乎添加 ffmpeg lib 顺序问题导致应用崩溃
-        -Wl,--start-group
-        avcodec avfilter avformat avutil swresample swscale
-        -Wl,--end-group
-        z
+#        # 写了此命令不用在乎添加 ffmpeg lib 顺序问题导致应用崩溃
+#        -Wl,--start-group
+#        avcodec avfilter avformat avutil swresample swscale
+#        -Wl,--end-group
+#        z
         #推流库
         rtmp
         #视频编码

@@ -8,6 +8,7 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
     <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
 
     <application
         android:name="com.devyk.ykav_sample.App"
@@ -34,6 +35,15 @@
             android:name="com.devyk.ykav_sample.PusherActivity"
             android:configChanges="screenSize|orientation"
             android:label="@string/pusher_name"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AVCodecPushActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/mediacodec_pusher_name"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AVSoftPushActivity"
+            android:configChanges="screenSize|orientation"
             android:screenOrientation="landscape" />
     </application>
 

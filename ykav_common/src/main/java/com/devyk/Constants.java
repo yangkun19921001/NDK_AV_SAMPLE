@@ -12,6 +12,13 @@ import android.os.Environment;
  * </pre>
  */
 public class Constants {
+
+    /**
+     * 是否硬编码
+     */
+    public static boolean isMediaCodec = true;
+
+
     //湖南卫视
 //    public static final String HUNAN_PATH = "rtmp://58.200.131.2:1935/livetv/hunantv";
     public static final String HUNAN_PATH = "rtmp://49.235.159.44:1992/devykLive/live1";

@@ -30,7 +30,8 @@ public:
     //编码的原始 YUV 数据
     void encodeData(int8_t *data);
 
-    VideoEncoderChannel(PushCallback *pCallback);
+
+    VideoEncoderChannel(PushCallback *pCallback,int isMediaCodec);
 
     void startEncoder();
 
@@ -45,6 +46,12 @@ public:
     void restart();
 
     void stop();
+    void sendSpsPps(uint8_t *sps, uint8_t *pps, int sps_len, int pps_len);
+
+    void sendFrame(int type, uint8_t *payload, int i_playload, long i);
+    void sendH264(int isKey, uint8_t *buf, int len, int);
+
+    void setMediaCodec(int mediacodec);
 
 private:
     pthread_mutex_t mMutex;
@@ -56,12 +63,7 @@ private:
 
     pthread_t mPid;
 
-
-
-    void sendSpsPps(uint8_t *sps, uint8_t *pps, int sps_len, int pps_len);
-
-    void sendFrame(int type, uint8_t *payload, int i_playload);
-
+    int isMediaCodec = 0;
 
 };
 #endif //NDK_SAMPLE_VideoEncoderChannel

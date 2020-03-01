@@ -50,11 +50,12 @@ public:
      * @param env
      * @param instance
      */
-    void init(JavaVM *javVM, JNIEnv *env, jobject instance) {
+    void init(JavaVM *javVM, JNIEnv *env, bool isMediaCodec, jobject instance) {
         PushCallback *pushCallback = new PushCallback(javVM, env, instance);
-        VideoEncoderChannel *videoChannel = new VideoEncoderChannel(pushCallback);
-        AudioEncoderChannel *audioChannel = new AudioEncoderChannel(pushCallback);
-        RTMPModel *rtmpManager = new RTMPModel(pushCallback, audioChannel, videoChannel);
+        VideoEncoderChannel *videoChannel = new VideoEncoderChannel(pushCallback, isMediaCodec);
+        AudioEncoderChannel *audioChannel = new AudioEncoderChannel(pushCallback, isMediaCodec);
+        RTMPModel *rtmpManager = new RTMPModel(pushCallback, audioChannel, videoChannel,
+                                               isMediaCodec);
         mVideoChannel = videoChannel;
         mAudioChannel = audioChannel;
         mRtmpManager = rtmpManager;
@@ -79,6 +80,7 @@ public:
 
         if (mRtmpManager) {
             mRtmpManager->release();
+            delete mRtmpManager;
             mRtmpManager = 0;
         }
     }
@@ -129,6 +131,15 @@ public:
         if (mRtmpManager) {
             mRtmpManager->restart();
         }
+    };
+
+    void setMediaCodec(int mediacodec) {
+        if (mVideoChannel)
+            mVideoChannel->setMediaCodec(mediacodec);
+        if (mAudioChannel)
+            mAudioChannel->setMediaCodec(mediacodec);
+        if (mRtmpManager)
+            mRtmpManager->setMediaCodec(mediacodec);
     };
 };
 

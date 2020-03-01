@@ -42,8 +42,6 @@ public class SampleActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {//6.0才用动态权限
             requestPermission();
         }
-
-
     }
 
     private void requestPermission() {
@@ -97,6 +95,14 @@ public class SampleActivity extends AppCompatActivity {
      * @param view
      */
     public void pusher(View view) {
-        startActivity(new Intent(this, PusherActivity.class));
+//        startActivity(new Intent(this, PusherActivity.class));
+        startActivity(new Intent(this, AVSoftPushActivity.class));
+    }
+
+    /**
+     * @param view 硬编码推流器
+     */
+    public void mediacodec_pusher(View view) {
+        startActivity(new Intent(this, AVCodecPushActivity.class));
     }
 }

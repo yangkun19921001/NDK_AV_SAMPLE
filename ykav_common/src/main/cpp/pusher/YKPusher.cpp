@@ -31,10 +31,11 @@ int JNI_OnLoad(JavaVM *javaVM, void *pVoid) {
  */
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_devyk_pusher_1common_PusherManager_native_1init(JNIEnv *env, jobject instance) {
+Java_com_devyk_pusher_1common_PusherManager_native_1init(JNIEnv *env, jobject instance,
+                                                         jboolean isMediaCodec) {
     LOGD("init");
     mYKPusher = new YKPusher();
-    mYKPusher->init(javVM, env, instance);
+    mYKPusher->init(javVM, env, isMediaCodec, instance);
 
 }
 
@@ -96,20 +97,6 @@ Java_com_devyk_pusher_1common_PusherManager_native_1start(JNIEnv *env, jobject i
 
 
 /**
- * 停止
- */
-extern "C"
-JNIEXPORT void JNICALL
-Java_com_devyk_pusher_1common_PusherManager_native_1stop(JNIEnv *env, jobject instance) {
-    LOGD("stop");
-    if (mYKPusher){
-        mYKPusher->stop();
-    }
-
-}
-
-
-/**
  * 释放
  */
 extern "C"
@@ -166,19 +153,58 @@ Java_com_devyk_pusher_1common_PusherManager_native_1pushAudio(JNIEnv *env, jobje
     }
 }
 
+
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_devyk_pusher_1common_PusherManager_native_1restart(JNIEnv *env, jobject instance) {
+Java_com_devyk_pusher_1common_PusherManager_pushAACData(JNIEnv *env, jobject instance,
+                                                        jbyteArray audio_, jint length,
+                                                        int type) {
+    jbyte *audio = env->GetByteArrayElements(audio_, NULL);
 
-    // TODO
-    if (mYKPusher) {
-        mYKPusher->restart();
-    }
+    if (mYKPusher && mYKPusher->mAudioChannel && mYKPusher->isReadyPushing())
+        mYKPusher->mAudioChannel->pushAAC(reinterpret_cast<u_char *>(audio), length, type);
 
+    env->ReleaseByteArrayElements(audio_, audio, 0);
 }
+
+
+
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_devyk_pusher_1common_PusherManager_pushH264(JNIEnv *env, jobject instance,
+                                                     jbyteArray video_, int type,
+                                                     long timestamp) {
+    jbyte *video = env->GetByteArrayElements(video_, NULL);
+
+    if (mYKPusher && mYKPusher->mVideoChannel && mYKPusher->isReadyPushing())
+        mYKPusher->mVideoChannel->sendH264(type, reinterpret_cast<uint8_t *>(video),
+                                           env->GetArrayLength(video_), timestamp);
+
+    env->ReleaseByteArrayElements(video_, video, 0);
+}
+
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_devyk_pusher_1common_PusherManager_native_1mediacodec(JNIEnv *env, jobject instance,
+                                                               jboolean b) {
+
+
+    if (mYKPusher){
+        mYKPusher->setMediaCodec(b);
+    }
+}
+
+
+
+
+
 
 int YKPusher::isReadyPushing() {
     return mRtmpManager->readyPushing;
 }
+
+
 
 

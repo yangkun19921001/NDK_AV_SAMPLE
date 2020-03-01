@@ -22,13 +22,15 @@ public:
 
     ~AudioEncoderChannel();
 
-    AudioEncoderChannel(PushCallback *pCallback);
+    AudioEncoderChannel(PushCallback *pCallback,int mediacodec);
 
     void setAudioEncoderInfo(int samplesHZ, int channel);
 
     int getInputSamples();
 
     void encodeData(int8_t *data);
+
+    void pushAAC(u_char *data,int len, long timestamp);
 
     RTMPPacket *getAudioTag();
 
@@ -43,11 +45,12 @@ public:
     void startEncoder();
 
 
-    void _onEncode();
 
     void restart();
 
     void stop();
+
+    void setMediaCodec(int i);
 
 private:
     AudioCallback mAudioCallback;
@@ -58,6 +61,8 @@ private:
     u_char *mBuffer = 0;
 
     int isStart = 0;
+
+    int isMediaCodec = 0;
 };
 
 

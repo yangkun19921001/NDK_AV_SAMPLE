@@ -12,6 +12,8 @@
 //引入 log
 #include "macro.h"
 
+#define RTMP_HEAD_SIZE (sizeof(RTMPPacket)+RTMP_MAX_HEADER_SIZE)
+
 
 #define THREAD_MAIN 1   // 此宏代表 主线程的意思
 #define THREAD_CHILD 2  // 此宏代表 子线程的意思
@@ -45,7 +47,15 @@
 
 //语音编码器打开失败
 #define FAAC_ENC_OPEN_ERROR  -12
+#define RTMP_PUSHER_ERROR  -13
 
+
+#define RTMP_PACKET_FIRST_VIDEO               1
+#define RTMP_PACKET_INTER_FRAME               5
+#define RTMP_PACKET_KEY_FRAME               4
+
+#define RTMP_PACKET_FIRST_AUDIO               2
+#define RTMP_PACKET_AUDIO               3
 
 #endif //NDK_SAMPLE_CONSTANTS_H
 

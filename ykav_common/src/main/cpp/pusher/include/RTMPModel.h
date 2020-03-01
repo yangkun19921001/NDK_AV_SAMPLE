@@ -27,7 +27,7 @@ public:
     int isStart = false;
 
     RTMPModel(PushCallback *pCallback, AudioEncoderChannel *audioEncoderChannel,
-              VideoEncoderChannel *videoEncoderChannel);
+              VideoEncoderChannel *videoEncoderChannel,int mediacodec);
 
     ~RTMPModel();
 
@@ -42,8 +42,6 @@ public:
     void release();
 
 
-
-
     /**
  * 定义一个 RTMP 开始链接的时间
  */
@@ -56,6 +54,10 @@ public:
     void restart();
 
     void stop();
+    RTMP *rtmp;
+
+
+    void setMediaCodec(int mediacodec);
 
 private:
     char *url;
@@ -65,7 +67,6 @@ private:
 
 
 
-    RTMP *rtmp;
     /**
       * 头包 Audio 信息
     */
@@ -81,6 +82,9 @@ private:
     AudioEncoderChannel *mAudioChannel = 0;
 
     void setPacketReleaseCallback();
+
+
+    int  isMediacodec = false;
 
 
 };

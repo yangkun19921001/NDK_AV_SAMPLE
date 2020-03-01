@@ -2,9 +2,20 @@ package com.devyk.pusher_common;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
+import android.media.MediaCodec;
 import android.media.MediaRecorder;
 
+import com.devyk.audio.AudioProcessor;
+import com.devyk.audio.AudioUtils;
+import com.devyk.audio.OnAudioEncodeListener;
 import com.devyk.capture.AudioCapture;
+import com.devyk.configuration.AudioConfiguration;
+import com.devyk.constant.SopCastConstant;
+import com.devyk.stream.packer.Packer;
+import com.devyk.stream.packer.rtmp.RtmpPacker;
+import com.devyk.utils.SopCastLog;
+
+import java.nio.ByteBuffer;
 
 /**
  * <pre>
@@ -15,36 +26,35 @@ import com.devyk.capture.AudioCapture;
  *     desc    : This is AudioChannel
  * </pre>
  */
-public class AudioChannel extends BaseChannel{
-    private PusherManager mPusherManager;
+public class AudioChannel extends BaseChannel {
     private AudioCapture mAudioCapture;
 
-    private int channels = 1;
-
-    /**
-     * 采样率
-     */
-    private int sampleRate = 44100;
-    /**
-     * 采样大小
-     */
-    private int inputSamples;
 
     //准备录音机 采集pcm 数据
     int channelConfig;
+
+
+    int channels = 1;
 
     /**
      * 是否开始
      */
     boolean isLive = false;
+    private AudioConfiguration mAudioConfiguration;
+    private Packer.OnAudioPacketListener mOnPacketListener;
+    private AudioRecord mAudioRecord;
+    private AudioProcessor mAudioProcessor;
 
-    public AudioChannel(PusherManager pusherManager) {
-        mPusherManager = pusherManager;
-
+    public AudioChannel(AudioConfiguration audioConfiguration, Packer.OnAudioPacketListener onPacketListener) {
+        mAudioConfiguration = audioConfiguration;
+        mOnPacketListener = onPacketListener;
         initAudioCapture();
     }
 
     private void initAudioCapture() {
+
+        //最小需要的缓冲区
+
         mAudioCapture = new AudioCapture();
 
         if (channels == 2) {
@@ -53,25 +63,30 @@ public class AudioChannel extends BaseChannel{
             channelConfig = AudioFormat.CHANNEL_IN_MONO;
         }
 
+        mOnPacketListener.sendAudioInfo(mAudioConfiguration.frequency,channels);
 
-        mPusherManager.native_setAudioEncInfo(sampleRate, channels);
         //16 位 2个字节
-        inputSamples = mPusherManager.getInputSamples() * 2;
+       int inputSamples = mOnPacketListener.getInputSamples() * 2;
 
 
         mAudioCapture.setOnAudioFrameCapturedListener(new AudioCapture.OnAudioFrameCapturedListener() {
             @Override
             public void onAudioFrameCaptured(byte[] audioData) {
                 if (isLive){
-                    mPusherManager.native_pushAudio(audioData);
+                    mOnPacketListener.onPacket(audioData, RtmpPacker.PCM);
                 }
             }
         });
 
         //最小需要的缓冲区
-        int minBufferSize = AudioRecord.getMinBufferSize(sampleRate, channelConfig, AudioFormat.ENCODING_PCM_16BIT) * 2;
-        mAudioCapture.startCapture(MediaRecorder.AudioSource.MIC,sampleRate,channelConfig,AudioFormat.ENCODING_PCM_16BIT,
+        int minBufferSize = AudioRecord.getMinBufferSize(mAudioConfiguration.frequency, channelConfig, AudioFormat.ENCODING_PCM_16BIT) * 2;
+        mAudioCapture.startCapture(MediaRecorder.AudioSource.MIC,mAudioConfiguration.frequency,channelConfig,AudioFormat.ENCODING_PCM_16BIT,
                 minBufferSize > inputSamples ? minBufferSize : inputSamples,inputSamples);
+    }
+
+
+    public void start() {
+        SopCastLog.d(SopCastConstant.TAG, "Audio Recording start");
     }
 
     @Override

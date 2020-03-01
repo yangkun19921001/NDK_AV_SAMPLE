@@ -13,20 +13,21 @@ AudioEncoderChannel::~AudioEncoderChannel() {
 
 void AudioEncoderChannel::release() {
     isStart = false;
-    DELETE(mBuffer);
     //释放编码器
     if (mAudioCodec) {
         faacEncClose(mAudioCodec);
         mAudioCodec = 0;
     }
+    DELETE(mBuffer);
 }
 
 void AudioEncoderChannel::setAudioCallback(AudioCallback audioCallback) {
     this->mAudioCallback = audioCallback;
 }
 
-AudioEncoderChannel::AudioEncoderChannel(PushCallback *pCallback) {
+AudioEncoderChannel::AudioEncoderChannel(PushCallback *pCallback, int mediacodec) {
     this->mIPushCallback = pCallback;
+    this->isMediaCodec = mediacodec;
 
 }
 
@@ -34,10 +35,15 @@ AudioEncoderChannel::AudioEncoderChannel(PushCallback *pCallback) {
  * rtmp 连接成功 开始编码
  */
 void AudioEncoderChannel::startEncoder() {
+    if (isMediaCodec)
+        return;
     isStart = true;
 }
 
+
+//设置语音软编码参数
 void AudioEncoderChannel::setAudioEncoderInfo(int samplesHZ, int channel) {
+    release();
     //通道
     mChannels = channel;
     //打开编码器
@@ -72,14 +78,15 @@ int AudioEncoderChannel::getInputSamples() {
 }
 
 /**
- * 真正编码的函数
+ * 真正软编码的函数
  * @param data
  */
 void AudioEncoderChannel::encodeData(int8_t *data) {
     if (!isStart) {
         return;
     }
-
+    if (!mAudioCodec)
+        return;
     //返回编码后的数据字节长度
     int bytelen = faacEncEncode(mAudioCodec, reinterpret_cast<int32_t *>(data), mInputSamples,
                                 mBuffer, mMaxOutputBytes);
@@ -108,9 +115,16 @@ void AudioEncoderChannel::encodeData(int8_t *data) {
     }
 }
 
+/**
+ * 音频头包数据
+ * @return
+ */
 RTMPPacket *AudioEncoderChannel::getAudioTag() {
-    if (!mAudioCodec)
-        return 0;
+    if (!mAudioCodec) {
+        setAudioEncoderInfo(44100, 1);
+
+        if (!mAudioCodec)return 0;
+    }
     u_char *buf;
     u_long len;
     faacEncGetDecoderSpecificInfo(mAudioCodec, &buf, &len);
@@ -134,13 +148,47 @@ RTMPPacket *AudioEncoderChannel::getAudioTag() {
     return packet;
 }
 
+/**
+ * 恢复
+ */
 void AudioEncoderChannel::restart() {
     isStart = true;
 }
 
+/**
+ * 停止
+ */
 void AudioEncoderChannel::stop() {
     isStart = false;
 }
+
+
+/**
+ * 直接推送 AAC 硬编码
+ * @param data
+ */
+void AudioEncoderChannel::pushAAC(u_char *data, int dataLen, long timestamp) {
+    RTMPPacket *packet = (RTMPPacket *) malloc(sizeof(RTMPPacket));
+    RTMPPacket_Alloc(packet, dataLen);
+    RTMPPacket_Reset(packet);
+    packet->m_nChannel = 0x05; //音频
+    memcpy(packet->m_body, data, dataLen);
+    packet->m_headerType = RTMP_PACKET_SIZE_LARGE;
+    packet->m_hasAbsTimestamp = FALSE;
+    packet->m_packetType = RTMP_PACKET_TYPE_AUDIO;
+    packet->m_nBodySize = dataLen;
+    if (mAudioCallback)
+        mAudioCallback(packet);
+
+}
+
+void AudioEncoderChannel::setMediaCodec(int mediacodec) {
+    this->isMediaCodec = mediacodec;
+
+}
+
+
+
 
 
 

@@ -21,6 +21,10 @@ void releasePackets(RTMPPacket *&packet) {
     }
 }
 
+int32_t getStreamId() {
+    return rtmpModel->rtmp->m_stream_id;
+}
+
 
 void callback(RTMPPacket *packet) {
     if (packet) {
@@ -40,14 +44,14 @@ void RTMPModel::setPacketReleaseCallback() {
 }
 
 RTMPModel::RTMPModel(PushCallback *pCallback, AudioEncoderChannel *audioEncoderChannel,
-                     VideoEncoderChannel *videoEncoderChannel) {
+                     VideoEncoderChannel *videoEncoderChannel, int mediacodec) {
     this->pushCallback = pCallback;
     this->mAudioChannel = audioEncoderChannel;
     this->mVideoChannel = videoEncoderChannel;
-
     //设置语音视频包的监听
     this->mVideoChannel->setVideoCallback(callback);
     this->mAudioChannel->setAudioCallback(callback);
+    this->isMediacodec = mediacodec;
     //设置需要释放语音视频 rtmp 包
     setPacketReleaseCallback();
 }
@@ -58,6 +62,7 @@ RTMPModel::~RTMPModel() {
         pushCallback = nullptr;
         pushCallback = 0;
     }
+
 }
 
 
@@ -66,14 +71,22 @@ RTMPModel::~RTMPModel() {
  */
 void RTMPModel::onPush() {
     RTMPPacket *packet = 0;
-    while (readyPushing) {
+    while (isStart) {
+
+        if (!isStart) {
+            LOGE("释放 native 资源 isStart");
+            return;
+        }
+
         mPackets.pop(packet);
+
 
         if (!readyPushing) {
             releasePackets(packet);
             return;
         }
         if (!packet) {
+            LOGE("释放 native 资源 isStart");
             continue;
         }
 
@@ -81,15 +94,15 @@ void RTMPModel::onPush() {
         int ret = RTMP_SendPacket(rtmp, packet, 1);
         if (!ret) {
             LOGE("发送失败")
-            return;
+            if (pushCallback) {
+                pushCallback->onError(THREAD_CHILD, RTMP_PUSHER_ERROR);
+            }
+            continue;
         }
     }
     releasePackets(packet);
     release();//释放
-    if (rtmp) {
-        RTMP_Close(rtmp);
-        RTMP_Free(rtmp);
-    }
+
 }
 
 
@@ -99,6 +112,11 @@ void RTMPModel::onPush() {
 void RTMPModel::onConnect() {
     if (pushCallback)
         pushCallback->onRtmpConnect(THREAD_CHILD);
+    if (rtmp && isStart) {
+        RTMP_Close(rtmp);
+        RTMP_Free(rtmp);
+        rtmp = 0;
+    }
     this->rtmp = RTMP_Alloc();
     if (!rtmp) {
         if (pushCallback) {
@@ -127,6 +145,7 @@ void RTMPModel::onConnect() {
         if (pushCallback) {
             pushCallback->onError(THREAD_CHILD, RTMP_CONNECT_ERROR);
         }
+        return;
     }
 
     ret = RTMP_ConnectStream(rtmp, 0);
@@ -134,30 +153,36 @@ void RTMPModel::onConnect() {
         if (pushCallback) {
             pushCallback->onError(THREAD_CHILD, RTMP_CONNECT_ERROR);
         }
+        return;
     }
     //记录一个开始时间
     mStartTime = RTMP_GetTime();
     //表示可以开始推流了
     readyPushing = true;
+    isStart = true;
     if (pushCallback)
         pushCallback->onRtmpSucceed(THREAD_CHILD);
 
-    //通知音频。视频模块可以开始编码了
-    this->mAudioChannel->startEncoder();
-    this->mVideoChannel->startEncoder();
 
     //队列可以开始工作了
     mPackets.setFlag(true);
-    //保证第一个数据包是音频
-    if (mAudioChannel->getAudioTag())
-        callback(mAudioChannel->getAudioTag());
+
+    //通知音频。视频模块可以开始编码了
+    if (!isMediacodec) {
+        this->mAudioChannel->startEncoder();
+        this->mVideoChannel->startEncoder();
+        //保证第一个数据包是音频
+        if (mAudioChannel->getAudioTag())
+            callback(mAudioChannel->getAudioTag());
+    }
+
     onPush();//死循环阻塞获取推流数据
 
 }
 
 void RTMPModel::_onConnect(const char *url) {
     //开始链接
-    isStart = true;
+
     //防止 java 传递过来的 jstring 释放。
     char *rtmpUrl = new char[strlen(url) + 1];
     strcpy(rtmpUrl, url);
@@ -169,13 +194,13 @@ void RTMPModel::_onConnect(const char *url) {
 void RTMPModel::release() {
     isStart = false;
     readyPushing = false;
-    mPackets.setFlag(false);
-    mPackets.clearQueue();
     if (rtmp) {
         RTMP_Close(rtmp);
         RTMP_Free(rtmp);
+        rtmp = 0;
+        LOGE("释放 native 资源");
     }
-
+    mPackets.clearQueue();
 }
 
 void RTMPModel::restart() {
@@ -185,5 +210,10 @@ void RTMPModel::restart() {
 void RTMPModel::stop() {
     mPackets.setFlag(0);
 }
+
+void RTMPModel::setMediaCodec(int mediacodec) {
+    this->isMediacodec = mediacodec;
+}
+
 
 

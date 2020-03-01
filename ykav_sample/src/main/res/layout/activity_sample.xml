@@ -5,16 +5,22 @@
     android:orientation="vertical">
 
     <Button
-        android:onClick="player"
-        android:text="播放器"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="player"
+        android:text="拉流播放器" />
 
 
     <Button
-        android:onClick="pusher"
-        android:text="推流器"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="pusher"
+        android:text="音视频软编推流器" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mediacodec_pusher"
+        android:text="音视频硬编码推流器" />
 
 </LinearLayout>

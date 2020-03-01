@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.devyk.ui.SoftLivingView
+        android:id="@+id/liveView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+    <com.devyk.ykav_sample.view.TopRightWeightedLayout
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:background="#4d000000"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.devyk.ykav_sample.view.MultiToggleImageButton
+            android:id="@+id/record_mic_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/record_mic_icons" />
+
+        <com.devyk.ykav_sample.view.MultiToggleImageButton
+            android:id="@+id/camera_flash_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_flashmode_icons" />
+
+        <com.devyk.ykav_sample.view.MultiToggleImageButton
+            android:id="@+id/camera_switch_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_id_icons" />
+
+        <com.devyk.ykav_sample.view.MultiToggleImageButton
+            android:id="@+id/camera_focus_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_focus_icons" />
+
+        <com.devyk.ykav_sample.view.MultiToggleImageButton
+            android:id="@+id/camera_render_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_render_icons" />
+    </com.devyk.ykav_sample.view.TopRightWeightedLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#4d000000"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnRecord"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ic_record_start"
+            android:onClick="startLive" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressConnecting"
+        style="?android:progressBarStyleSmall"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

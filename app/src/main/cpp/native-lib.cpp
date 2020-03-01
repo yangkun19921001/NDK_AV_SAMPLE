@@ -151,7 +151,7 @@ Java_com_devyk_ndk_1sample_MainActivity_getPerson(JNIEnv *env, jobject instance)
     jmethodID ageMethodId = env->GetMethodID(j_person_class, "setAge", ageSig);
 
     //7. 正在调用 Java 对象函数
-    const char *name = "DevYK";
+    const char *name = "devyk";
     jstring newStringName = env->NewStringUTF(name);
     env->CallVoidMethod(person_obj, nameMethodId, newStringName);
     env->CallVoidMethod(person_obj, ageMethodId, 28);

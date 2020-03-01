@@ -4,7 +4,11 @@ import android.app.Activity;
 import android.hardware.Camera;
 import android.util.Log;
 
+import com.devyk.Constants;
+import com.devyk.camera.CameraHolder;
 import com.devyk.capture.CameraCapture;
+import com.devyk.stream.packer.Packer;
+import com.devyk.stream.packer.rtmp.RtmpPacker;
 
 import java.lang.ref.WeakReference;
 
@@ -17,57 +21,22 @@ import java.lang.ref.WeakReference;
  *     desc    : This is VideoChannel
  * </pre>
  */
-public class VideoChannel extends BaseChannel implements IPush, Camera.PreviewCallback, CameraCapture.OnChangedSizeListener {
+public class VideoChannel extends BaseChannel implements IPush, Camera.PreviewCallback {
 
     private String TAG = this.getClass().getSimpleName();
-
-    /**
-     * 管理 native 方法的
-     */
-    private PusherManager mPushManager;
-
-    /**
-     * 管理视频预览采集的
-     */
-    private CameraCapture mCameraCapture;
-    /**
-     * 视频码率
-     */
-    private int mBit;
-
-    /**
-     * 视频  fps
-     */
-    private int mFps;
-
     /**
      * 视频  fps
      */
     private boolean isLive;
+    private Packer.OnPacketListener onPacketListener;
 
 
-    /**
-     * @param parameter 视频参数和关键类
-     */
-    public VideoChannel(AudioVideoParameter parameter, PusherManager pusherManager) {
-        if (parameter == null || pusherManager == null || parameter.surfaceHolder == null) {
-            Log.e(TAG, "check parameter is init ?");
-            return;
-        }
-        this.mBit = parameter.bitrate;
-        this.mCameraCapture = new CameraCapture(parameter.rotation, parameter.cameraId, parameter.width, parameter.height);
-        this.mPushManager = pusherManager;
-        this.mFps = parameter.fps;
-
-        //设置预览回调
-        mCameraCapture.setPreviewCallback(this);
-        //设置预览窗口改变回调
-        mCameraCapture.setOnChangedSizeListener(this);
-        //设置预览显示 Holder
-        mCameraCapture.setPreviewDisplay(parameter.surfaceHolder);
-
-
+    public VideoChannel(Packer.OnPacketListener onPacketListener) {
+        this.onPacketListener = onPacketListener;
+        setPreviewCallback(this);
     }
+
+
 
 
     @Override
@@ -83,7 +52,6 @@ public class VideoChannel extends BaseChannel implements IPush, Camera.PreviewCa
 
     @Override
     public void release() {
-        if (mCameraCapture != null) mCameraCapture.release();
     }
 
     @Override
@@ -99,16 +67,11 @@ public class VideoChannel extends BaseChannel implements IPush, Camera.PreviewCa
      */
     @Override
     public void push(byte[] data) {
-        if (isLive && mPushManager != null)
-            mPushManager.native_push_video(data);
+        if (isLive && onPacketListener != null) {
+            onPacketListener.onPacket(data, RtmpPacker.YUV);
+        }
     }
 
-    @Override
-    public void onChanged(int w, int h) {
-        if (mPushManager != null)
-            mPushManager.native_setVideoEncoderInfo(w, h, mFps, mBit);
-
-    }
 
     @Override
     public void onPreviewFrame(byte[] data, Camera camera) {
@@ -118,14 +81,31 @@ public class VideoChannel extends BaseChannel implements IPush, Camera.PreviewCa
 
 
     public void switchCamera() {
-        if (mCameraCapture != null)
-            mCameraCapture.switchCamera();
     }
 
+    /**
+     * 设置当屏幕发生改变需要设置的监听
+     *
+     * @param listener
+     */
+    public void setOnChangedSizeListener(CameraCapture.OnChangedSizeListener listener) {
+        CameraHolder.instance().setOnChangedSizeListener(listener);
+    }
 
-    public void setVideoPreviewRotation(int rotaion) {
-        if (mCameraCapture != null)
-            mCameraCapture.setPreviewOrientation(rotaion);
+    /**
+     * 设置预览回调，用于软编
+     *
+     * @param previewCallback
+     */
+    public void setPreviewCallback(Camera.PreviewCallback previewCallback) {
+        CameraHolder.instance().setPreviewCallback(previewCallback);
 
+    }
+
+    /**
+     * 设置预览方向
+     */
+    public void setPreviewOrientation(int rotation) {
+        CameraHolder.instance().setPreviewOrientation(rotation);
     }
 }

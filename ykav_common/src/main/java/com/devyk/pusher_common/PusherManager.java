@@ -24,61 +24,47 @@ public class PusherManager {
         System.loadLibrary("ykpusher"); //加载推流 so
     }
 
-    private AudioChannel mAudioChannel;
-    private VideoChannel mVideoChannel;
     private IPushListener iPushListener;
 
     public PusherManager(AudioVideoParameter parameter) {
-        native_init();
-        this.mAudioChannel = new AudioChannel(this);
-        this.mVideoChannel = new VideoChannel(parameter, this);
+        if (parameter == null) return;
+        setMediaCodec(parameter.isMediaCodec);
+        if (Constants.isMediaCodec) return;
     }
 
     public void switchCamera() {
-        mVideoChannel.switchCamera();
     }
 
     public void startLive(String path) {
+        native_init(Constants.isMediaCodec);
         native_start(path);
-        mVideoChannel.startLive();
-        mAudioChannel.startLive();
     }
 
     public void onRestart() {
-        native_restart();
-        mVideoChannel.onRestart();
-        mAudioChannel.onRestart();
+        if (Constants.isMediaCodec) return;
     }
 
 
-
-
     public void stopLive() {
-        mVideoChannel.stopLive();
-        mAudioChannel.stopLive();
-        native_stop();
+        if (Constants.isMediaCodec) return;
     }
 
 
     public void release() {
-        mVideoChannel.release();
-        mAudioChannel.release();
         native_release();
+        if (Constants.isMediaCodec) return;
     }
 
     public void setVideoPreviewRotation(int rotaion) {
-        mVideoChannel.setVideoPreviewRotation(rotaion);
+        if (Constants.isMediaCodec) return;
+//        mVideoChannel.setVideoPreviewRotation(rotaion);
     }
 
-    /**
-     * 重新开始播放
-     */
-    public native void native_restart();
 
     /**
      * 初始化  native
      */
-    public native void native_init();
+    public native void native_init(boolean isMediaCodec);
 
     /**
      * push 视频原始 nv21
@@ -104,21 +90,11 @@ public class PusherManager {
      */
     public native void native_start(String path);
 
-    /**
-     * 恢复播放
-     */
-    public native void onResume();
-
-
-    /**
-     * 停止推流
-     */
-    private native void native_stop();
 
     /**
      * 释放 native 资源
      */
-    private native void native_release();
+    public native void native_release();
 
     /**
      * 设置语音参数
@@ -135,6 +111,13 @@ public class PusherManager {
      */
     public native void native_pushAudio(byte[] audioData);
 
+    /**
+     * 发送 PCM 原始数据
+     *
+     * @param h264
+     */
+    public native void pushH264(byte[] h264, int type, long timeStamp);
+
 
     /**
      * 获取一次输入音频的样本数量
@@ -143,6 +126,21 @@ public class PusherManager {
      */
     public native int getInputSamples();
 
+
+    /**
+     * @param audio     直接推编码完成之后的音频流
+     * @param length
+     * @param timestamp
+     */
+    public native void pushAACData(byte[] audio, int length, int timestamp);
+
+
+    /**
+     * 设置是否硬编码
+     *
+     * @param b
+     */
+    private native void native_mediacodec(boolean b);
 
     /**
      * 当 rtmp 在 native 开始连接的时候会回调
@@ -163,6 +161,7 @@ public class PusherManager {
 
     }
 
+
     /**
      * 当 rtmp 在 native 连接失败或其它异常的时候会回调
      */
@@ -170,7 +169,6 @@ public class PusherManager {
         if (iPushListener != null) {
             if (Constants.IMessageType.RTMP_INIT_ERROR == errCode) {
                 iPushListener.onError("RTMP 模块初始化失败了，请联系管理员!");
-
             } else if (Constants.IMessageType.RTMP_CONNECT_ERROR == errCode) {
                 iPushListener.onError("连接服务器失败，请联系管理员!");
             } else if (Constants.IMessageType.RTMP_SET_URL_ERROR == errCode) {
@@ -182,7 +180,22 @@ public class PusherManager {
         }
     }
 
+    public boolean isMediaCodec() {
+        return Constants.isMediaCodec;
+    }
 
+    public void setMediaCodec(boolean b) {
+        Constants.isMediaCodec = b;
+        native_mediacodec(b);
+    }
+
+    public void pushPCM(byte[] data) {
+        native_pushAudio(data);
+    }
+
+    public void pushYUV(byte[] data) {
+        native_push_video(data);
+    }
 
 
     public interface IPushListener {

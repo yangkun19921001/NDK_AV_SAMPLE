@@ -26,6 +26,8 @@ public class AudioVideoParameter {
 
     public int rotation;
 
+    public boolean isMediaCodec;
+
     public SurfaceHolder surfaceHolder;
 
     public static final class Builder {
@@ -35,6 +37,8 @@ public class AudioVideoParameter {
         private int bitrate;
         private int fps;
         private int rotation;
+        private boolean isMediaCodec;
+
 
 
 
@@ -79,6 +83,11 @@ public class AudioVideoParameter {
             return this;
         }
 
+        public Builder withMediaCodec(boolean  mediacodec) {
+            this.isMediaCodec = mediacodec;
+            return this;
+        }
+
         public Builder withSurfaceHolder(SurfaceHolder  surfaceHolder) {
             this.surfaceHolder = surfaceHolder;
             return this;
@@ -93,6 +102,7 @@ public class AudioVideoParameter {
             avParameter.fps = this.fps;
             avParameter.rotation = this.rotation;
             avParameter.surfaceHolder = this.surfaceHolder;
+            avParameter.isMediaCodec = this.isMediaCodec;
             return avParameter;
         }
     }

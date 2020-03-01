@@ -2,4 +2,5 @@
     <string name="app_name">ykav</string>
     <string name="player_name">播放器</string>
     <string name="pusher_name">推流器</string>
+    <string name="mediacodec_pusher_name">硬编码推流器</string>
 </resources>

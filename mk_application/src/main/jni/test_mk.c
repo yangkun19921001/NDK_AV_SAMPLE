@@ -12,6 +12,6 @@ JNIEXPORT void JNICALL
 Java_com_devyk_mk_1application_MainActivity_testMK
 (JNIEnv * env, jobject inst) {
 
-__android_log_print(ANDROID_LOG_DEBUG, "DevYK", "testMK--》：%d", main());
+__android_log_print(ANDROID_LOG_DEBUG, "devyk", "testMK--》：%d", main());
 
 }

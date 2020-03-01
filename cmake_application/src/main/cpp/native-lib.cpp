@@ -15,6 +15,6 @@ Java_com_devyk_cmake_1application_MainActivity_testCmake(
         jobject /* this */) {
     std::string hello = "Hello from C++";
 
-    __android_log_print(ANDROID_LOG_DEBUG, "DevYK", "main--->:%d", main());
+    __android_log_print(ANDROID_LOG_DEBUG, "devyk", "main--->:%d", main());
 
 }

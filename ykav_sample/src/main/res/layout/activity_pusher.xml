@@ -5,8 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
+    <com.devyk.ui.CameraLivingView
+        android:id="@+id/liveView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <SurfaceView
+        android:visibility="gone"
         android:id="@+id/surface"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

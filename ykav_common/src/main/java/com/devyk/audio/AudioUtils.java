@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
+import android.os.Build;
 
 import com.devyk.configuration.AudioConfiguration;
 

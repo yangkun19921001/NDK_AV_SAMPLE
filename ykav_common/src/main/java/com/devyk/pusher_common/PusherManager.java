@@ -112,7 +112,7 @@ public class PusherManager {
     public native void native_pushAudio(byte[] audioData);
 
     /**
-     * 发送 PCM 原始数据
+     * 发送 H264 数据
      *
      * @param h264
      */
@@ -173,7 +173,11 @@ public class PusherManager {
                 iPushListener.onError("连接服务器失败，请联系管理员!");
             } else if (Constants.IMessageType.RTMP_SET_URL_ERROR == errCode) {
                 iPushListener.onError("请检查 url 地址.");
-            } else {
+            } else if (Constants.IMessageType.FAAC_ENC_OPEN_ERROR == errCode){
+                iPushListener.onError("打开语音编码器失败.");
+            }else if (Constants.IMessageType.RTMP_PUSHER_ERROR == errCode){
+                iPushListener.onError("rtmp 发送失败.");
+            }else {
                 iPushListener.onError("未知错误!");
             }
 

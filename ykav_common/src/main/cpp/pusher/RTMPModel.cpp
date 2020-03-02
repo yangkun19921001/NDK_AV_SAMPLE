@@ -73,10 +73,6 @@ void RTMPModel::onPush() {
     RTMPPacket *packet = 0;
     while (isStart) {
 
-        if (!isStart) {
-            LOGE("释放 native 资源 isStart");
-            return;
-        }
 
         mPackets.pop(packet);
 
@@ -86,7 +82,7 @@ void RTMPModel::onPush() {
             return;
         }
         if (!packet) {
-            LOGE("释放 native 资源 isStart");
+            LOGE("获取失败");
             continue;
         }
 
@@ -97,7 +93,7 @@ void RTMPModel::onPush() {
             if (pushCallback) {
                 pushCallback->onError(THREAD_CHILD, RTMP_PUSHER_ERROR);
             }
-            continue;
+            return;
         }
     }
     releasePackets(packet);
@@ -112,11 +108,13 @@ void RTMPModel::onPush() {
 void RTMPModel::onConnect() {
     if (pushCallback)
         pushCallback->onRtmpConnect(THREAD_CHILD);
-    if (rtmp && isStart) {
+
+    if (rtmp) {
         RTMP_Close(rtmp);
         RTMP_Free(rtmp);
         rtmp = 0;
     }
+
     this->rtmp = RTMP_Alloc();
     if (!rtmp) {
         if (pushCallback) {
@@ -195,6 +193,7 @@ void RTMPModel::release() {
     isStart = false;
     readyPushing = false;
     if (rtmp) {
+        RTMP_DeleteStream(rtmp);
         RTMP_Close(rtmp);
         RTMP_Free(rtmp);
         rtmp = 0;

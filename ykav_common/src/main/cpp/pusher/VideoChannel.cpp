@@ -31,17 +31,23 @@ VideoEncoderChannel::~VideoEncoderChannel() {
 
 void VideoEncoderChannel::release() {
     isStart = false;
+
     pthread_mutex_destroy(&mMutex);
     if (mVideoCodec) {
         x264_encoder_close(mVideoCodec);
         mVideoCodec = 0;
     }
 
+    if (mVideoCallback) {
+        mVideoCallback = 0;
+    }
+
     if (pic_in) {
         x264_picture_clean(pic_in);
-        DELETE (pic_in)
+        pic_in = 0;
     }
     mVideoPackets.clearQueue();
+    mVideoPackets.setFlag(0);
 
 }
 
@@ -119,8 +125,7 @@ void VideoEncoderChannel::setVideoEncoderInfo(int width, int height, int fps, in
  * @param data  I420 格式的数据
  */
 void VideoEncoderChannel::encodeData(int8_t *data) {
-    if (isStart)
-        mVideoPackets.push(data);
+    mVideoPackets.push(data);
 }
 
 
@@ -171,7 +176,11 @@ void VideoEncoderChannel::onEncoder() {
         int pi_nal = 0;
         x264_picture_t pic_out;
         //开始编码
-        x264_encoder_encode(mVideoCodec, &pp_nal, &pi_nal, pic_in, &pic_out);
+        int ret = x264_encoder_encode(mVideoCodec, &pp_nal, &pi_nal, pic_in, &pic_out);
+        if (!ret) {
+            LOGE("编码失败");
+            continue;
+        }
 
         //如果是关键帧
         int sps_len = 0;
@@ -252,8 +261,8 @@ void VideoEncoderChannel::sendSpsPps(uint8_t *sps, uint8_t *pps, int sps_len, in
     //不使用绝对时间
     packet->m_hasAbsTimestamp = 0;
     packet->m_headerType = RTMP_PACKET_SIZE_MEDIUM;
-
-    mVideoCallback(packet);
+    if (mVideoCallback && isStart)
+        mVideoCallback(packet);
 }
 
 /**
@@ -301,7 +310,7 @@ void VideoEncoderChannel::sendFrame(int type, uint8_t *payload, int i_payload, l
     packet->m_packetType = RTMP_PACKET_TYPE_VIDEO;
     packet->m_nChannel = 0x10;
     packet->m_headerType = RTMP_PACKET_SIZE_LARGE;
-    if (mVideoCallback)
+    if (mVideoCallback && isStart)
         mVideoCallback(packet);
 }
 
@@ -328,8 +337,6 @@ void VideoEncoderChannel::stop() {
  * @param len H264 长度
  */
 void VideoEncoderChannel::sendH264(int type, uint8_t *data, int dataLen, int timeStamp) {
-
-
     RTMPPacket *packet = (RTMPPacket *) malloc(sizeof(RTMPPacket));
     RTMPPacket_Alloc(packet, dataLen);
     RTMPPacket_Reset(packet);
@@ -345,8 +352,7 @@ void VideoEncoderChannel::sendH264(int type, uint8_t *data, int dataLen, int tim
     packet->m_hasAbsTimestamp = FALSE;
     packet->m_packetType = RTMP_PACKET_TYPE_VIDEO;
     packet->m_nBodySize = dataLen;
-    if (mVideoCallback)
-        mVideoCallback(packet);
+    mVideoCallback(packet);
 
 }
 

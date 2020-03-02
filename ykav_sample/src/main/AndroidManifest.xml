@@ -32,11 +32,6 @@
             android:configChanges="screenSize|orientation"
             android:label="@string/player_name" />
         <activity
-            android:name="com.devyk.ykav_sample.PusherActivity"
-            android:configChanges="screenSize|orientation"
-            android:label="@string/pusher_name"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".AVCodecPushActivity"
             android:configChanges="screenSize|orientation"
             android:label="@string/mediacodec_pusher_name"

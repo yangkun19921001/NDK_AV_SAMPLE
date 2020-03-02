@@ -5,6 +5,8 @@
 #ifndef NDK_SAMPLE_AUDIOCHANNEL_ENCODER
 #define NDK_SAMPLE_AUDIOCHANNEL_ENCODER
 
+#define FAAC_DEFAUTE_SAMPLE_RATE 44100
+#define FAAC_DEFAUTE_SAMPLE_CHANNEL 1
 
 #include <rtmp.h>
 #include "PushCallback.h"

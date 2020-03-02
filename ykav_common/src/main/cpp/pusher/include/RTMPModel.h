@@ -54,15 +54,15 @@ public:
     void restart();
 
     void stop();
-    RTMP *rtmp;
+    RTMP *rtmp = 0;
 
 
     void setMediaCodec(int mediacodec);
 
 private:
-    char *url;
+    char *url = 0;
     PushCallback *pushCallback;
-    pthread_mutex_t *mMutex;
+    pthread_mutex_t *mMutex = 0;
     pthread_t mPid;
 
 

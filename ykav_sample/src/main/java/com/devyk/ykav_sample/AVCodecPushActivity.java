@@ -271,8 +271,8 @@ public class AVCodecPushActivity extends Activity {
 
     private void setVideoInfo() {
         mVideoConfiguration = new VideoConfiguration.Builder()
-                .setSize(320, 240)
-                .setBps(300, 500)
+                .setSize(1280, 720)
+                .setBps(400, 600)
                 .setFps(20)
                 .build();
         mLFLiveView.setVideoConfiguration(mVideoConfiguration);

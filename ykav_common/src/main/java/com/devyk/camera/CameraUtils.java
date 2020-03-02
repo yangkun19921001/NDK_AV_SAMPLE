@@ -81,6 +81,8 @@ public class CameraUtils {
         setPreviewFormat(camera, parameters);
         setPreviewFps(camera, configuration.fps, parameters);
         setPreviewSize(camera, cameraData, cameraWidth, cameraHeight, parameters);
+
+        setPreviewCallback();
         cameraData.hasLight = supportFlash(camera);
         setOrientation(cameraData, isLandscape, camera);
         setFocusMode(camera, cameraData, isTouchMode);
@@ -105,8 +107,9 @@ public class CameraUtils {
 //                    yuv = rotation90(data, sCameraId, sWidth, sHeight);
 //                    break;
 //            }
-            // data数据依然是倒的
-            sPreviewCallback.onPreviewFrame(data, camera);
+            if (sPreviewCallback != null)
+                // data数据依然是倒的
+                sPreviewCallback.onPreviewFrame(data, camera);
             camera.addCallbackBuffer(data);
         }
     };
@@ -376,6 +379,16 @@ public class CameraUtils {
      */
     public static void setOnChangedSizeListener(CameraCapture.OnChangedSizeListener listener) {
         sScreenListener = listener;
+    }
+
+    /**
+     * 设置预览回调，用于软编
+     */
+    public static void setPreviewCallback() {
+        byte[] buffer = new byte[sHeight * sWidth * 3 / 2];
+        //数据缓存区
+        sCamera.addCallbackBuffer(buffer);
+        sCamera.setPreviewCallbackWithBuffer(myCallback);
     }
 
     /**

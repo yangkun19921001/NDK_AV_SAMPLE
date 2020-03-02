@@ -115,6 +115,7 @@ public class AudioCapture {
 
         mAudioRecord.startRecording();
 
+
         mIsLoopExit = false;
         mCaptureThread = new Thread(new AudioCaptureRunnable());
         mCaptureThread.start();

@@ -7,11 +7,11 @@
 #include <cstdio>
 #include "include/AudioChannel.h"
 
-
 AudioChannel::AudioChannel(int stream_index,
                            AVCodecContext *pContext, AVRational avRational,
                            JNICallback *jniCallback)
         : BaseChannel(stream_index, pContext, avRational, jniCallback) {
+
 
 
     //初始化 缓冲区 out_buffers

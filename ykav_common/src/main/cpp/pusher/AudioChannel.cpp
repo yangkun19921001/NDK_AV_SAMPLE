@@ -16,9 +16,10 @@ void AudioEncoderChannel::release() {
     //释放编码器
     if (mAudioCodec) {
         faacEncClose(mAudioCodec);
+        DELETE(mBuffer);
         mAudioCodec = 0;
     }
-    DELETE(mBuffer);
+
 }
 
 void AudioEncoderChannel::setAudioCallback(AudioCallback audioCallback) {
@@ -71,6 +72,7 @@ void AudioEncoderChannel::setAudioEncoderInfo(int samplesHZ, int channel) {
 
     //输出缓冲区 编码后的数据 用这个缓冲区来保存
     mBuffer = new u_char[mMaxOutputBytes];
+    isStart = true;
 }
 
 int AudioEncoderChannel::getInputSamples() {
@@ -82,10 +84,7 @@ int AudioEncoderChannel::getInputSamples() {
  * @param data
  */
 void AudioEncoderChannel::encodeData(int8_t *data) {
-    if (!isStart) {
-        return;
-    }
-    if (!mAudioCodec)
+    if (!mAudioCodec || !isStart)
         return;
     //返回编码后的数据字节长度
     int bytelen = faacEncEncode(mAudioCodec, reinterpret_cast<int32_t *>(data), mInputSamples,
@@ -105,7 +104,7 @@ void AudioEncoderChannel::encodeData(int8_t *data) {
         //图片数据
         memcpy(&packet->m_body[2], mBuffer, bytelen);
 
-        packet->m_hasAbsTimestamp = 0;
+        packet->m_hasAbsTimestamp = FALSE;
         packet->m_nBodySize = bodySize;
         packet->m_packetType = RTMP_PACKET_TYPE_AUDIO;
         packet->m_nChannel = 0x11;
@@ -121,8 +120,7 @@ void AudioEncoderChannel::encodeData(int8_t *data) {
  */
 RTMPPacket *AudioEncoderChannel::getAudioTag() {
     if (!mAudioCodec) {
-        setAudioEncoderInfo(44100, 1);
-
+        setAudioEncoderInfo(FAAC_DEFAUTE_SAMPLE_RATE, FAAC_DEFAUTE_SAMPLE_CHANNEL);
         if (!mAudioCodec)return 0;
     }
     u_char *buf;
@@ -140,7 +138,7 @@ RTMPPacket *AudioEncoderChannel::getAudioTag() {
     //图片数据
     memcpy(&packet->m_body[2], buf, len);
 
-    packet->m_hasAbsTimestamp = 0;
+    packet->m_hasAbsTimestamp = FALSE;
     packet->m_nBodySize = bodySize;
     packet->m_packetType = RTMP_PACKET_TYPE_AUDIO;
     packet->m_nChannel = 0x11;

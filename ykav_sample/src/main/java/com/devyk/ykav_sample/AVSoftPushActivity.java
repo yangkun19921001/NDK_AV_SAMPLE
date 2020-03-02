@@ -213,7 +213,6 @@ public class AVSoftPushActivity extends Activity {
         setNativeRtmpPush();
 
 
-
     }
 
     private void initRtmpAddressDialog() {
@@ -226,6 +225,7 @@ public class AVSoftPushActivity extends Activity {
         AlertDialog.Builder uploadBuilder = new AlertDialog.Builder(this);
         uploadBuilder.setTitle("输入推流地址");
         uploadBuilder.setView(playView);
+
         mUploadDialog = uploadBuilder.create();
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -375,9 +375,6 @@ public class AVSoftPushActivity extends Activity {
         mRtmpSender.setSenderListener(mSenderListener);
         mLFLiveView.setSender(mRtmpSender);
     }
-
-
-
 
 
     @Override

@@ -80,6 +80,8 @@ public class Constants {
         int RTMP_SET_URL_ERROR = -10;
         //连接服务器失败
         int RTMP_CONNECT_ERROR = -11;
+        int FAAC_ENC_OPEN_ERROR = -12;
+        int RTMP_PUSHER_ERROR  = -13;
 
     }
 

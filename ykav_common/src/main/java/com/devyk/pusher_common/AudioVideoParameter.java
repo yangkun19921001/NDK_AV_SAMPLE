@@ -37,6 +37,7 @@ public class AudioVideoParameter {
         private int bitrate;
         private int fps;
         private int rotation;
+
         private boolean isMediaCodec;
 
 

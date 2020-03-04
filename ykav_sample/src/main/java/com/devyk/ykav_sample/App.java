@@ -1,12 +1,19 @@
 package com.devyk.ykav_sample;
 
 import android.app.Application;
+import android.content.Context;
+import android.os.Debug;
+import android.os.Environment;
 import android.util.Log;
 
 import com.devyk.crash_module.Crash;
 import com.devyk.crash_module.inter.JavaCrashUtils;
+import com.seek.caton.Caton;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+
 
 import static android.content.ContentValues.TAG;
 import static com.devyk.Constants.JavaPath;
@@ -24,16 +31,20 @@ import static com.devyk.Constants.nativePath;
 public class App extends Application {
 
     @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+    }
+
+    @Override
     public void onCreate() {
         super.onCreate();
-
-
         if (!new File(nativePath).exists()) {
             new File(nativePath).mkdirs();
         }
         if (!new File(JavaPath).exists()) {
             new File(JavaPath).mkdirs();
         }
+
 
 
         new Crash.CrashBuild(getApplicationContext())
@@ -45,5 +56,9 @@ public class App extends Application {
                     }
                 })
                 .build();
+
+
+
+
     }
 }

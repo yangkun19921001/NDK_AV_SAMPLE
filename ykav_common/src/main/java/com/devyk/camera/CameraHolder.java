@@ -178,6 +178,7 @@ public class CameraHolder {
         mCameraDevice = null;
         mCameraData = null;
         mState = State.INIT;
+        CameraUtils.stop();
     }
 
     public void release() {

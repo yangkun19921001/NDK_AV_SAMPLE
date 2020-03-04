@@ -281,7 +281,7 @@ public class AVSoftPushActivity extends Activity {
     }
 
     private void setGestureDetector() {
-        mGestureDetector = new GestureDetector(this, new GestureListener());
+        mGestureDetector = new GestureDetector(this.getApplicationContext(), new GestureListener());
         mLFLiveView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -394,5 +394,6 @@ public class AVSoftPushActivity extends Activity {
         super.onDestroy();
         mLFLiveView.stop();
         mLFLiveView.release();
+        mGestureDetector = null;
     }
 }

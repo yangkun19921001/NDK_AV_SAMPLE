@@ -6,8 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ykav_common" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AvailableLibraryUpdateStorage">
@@ -47,6 +46,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb624877-9ecc-46c3-8f92-a0eb5acad1a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_pruas_Caton_v1_0_1_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -57,21 +58,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audio_video/audio_video.iml" beforeDir="false" afterPath="$PROJECT_DIR$/audio_video/audio_video.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/cpp/player/AudioChannel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/cpp/player/AudioChannel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/AudioChannel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/AudioChannel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/RTMPModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/RTMPModel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/VideoChannel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/VideoChannel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/AudioChannel.h" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/AudioChannel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/RTMPModel.h" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/RTMPModel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/audio/AudioUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/audio/AudioUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/capture/AudioCapture.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/capture/AudioCapture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/PusherManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/PusherManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_common/ykav_common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_common/ykav_common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_sample/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVCodecPushActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVCodecPushActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykav_sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVSoftPushActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVSoftPushActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/SampleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/SampleActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ykav_sample/src/main/res/layout/activity_sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/src/main/res/layout/activity_sample.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ykav_sample/ykav_sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ykav_sample/ykav_sample.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,23 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/AudioChannel.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="163" selection-start-line="163" selection-end-line="180" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVCodecPushActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="273" column="29" selection-start-line="273" selection-start-column="29" selection-end-line="273" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initLiveView#0;class#AVCodecPushActivity#0" />
-                <element signature="e#8724#8725#0" expanded="true" />
-                <element signature="e#8768#8769#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="343">
+              <caret line="94" column="18" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -150,86 +128,84 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVSoftPushActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2523">
-              <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+            <state relative-caret-position="1170">
+              <caret line="115" column="43" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/RTMPModel.cpp">
+        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="191" selection-start-line="191" selection-end-line="202" selection-end-column="1" />
+            <state relative-caret-position="389">
+              <caret line="163" column="30" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/view/GestureDetector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5085">
+              <caret line="384" column="11" selection-start-line="384" selection-start-column="11" selection-end-line="384" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/os/Looper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4305">
+              <caret line="317" column="25" selection-start-line="317" selection-start-column="25" selection-end-line="317" selection-end-column="25" />
               <folding>
-                <element signature="e#39#69#0" expanded="true" />
-                <element signature="e#2242#3829#0" />
+                <element signature="e#11949#11950#0" expanded="true" />
+                <element signature="e#11983#11984#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/sender/nativertmp/RtmpNativeSendr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1276#1277#0" expanded="true" />
-                <element signature="e#1326#1327#0" expanded="true" />
-                <element signature="e#2133#2134#0" expanded="true" />
-                <element signature="e#2173#2174#0" expanded="true" />
-                <element signature="e#3281#3282#0" expanded="true" />
-                <element signature="e#3336#3337#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/VideoChannel.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="332" selection-start-line="332" selection-end-line="356" selection-end-column="1" />
-              <folding>
-                <element signature="e#1172#2892#0" />
-                <element signature="e#3264#4962#0" />
-                <element signature="e#4965#6505#0" />
-                <element signature="e#6507#7768#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/configuration/VideoConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="57" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/mediacodec/VideoMediaCodec.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ykav_common/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/librtmp/include/rtmp.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="112" column="27" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="27" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/YKPusher.cpp">
+        <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/SampleActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="145" selection-start-line="145" selection-end-line="145" />
+            <state relative-caret-position="600">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/ui/SoftLivingView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/VideoChannel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -240,16 +216,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mMediaCodec</find>
-      <find>onData</find>
-      <find>RtmpSender</find>
       <find>pushH264</find>
       <find>onConnected</find>
       <find>PARAMETER_KEY_VIDEO_BITRATE</find>
@@ -270,13 +243,16 @@
       <find>mSurfaceHolder</find>
       <find>neon</find>
       <find>fail to publish</find>
-      <find>release</find>
       <find>关键帧</find>
       <find>switch</find>
       <find>STATE_INITIALIZED</find>
       <find>GLSurfaceView</find>
       <find>ZoomGestureListener</find>
       <find>SurfaceHolder</find>
+      <find>setMessageLogging</find>
+      <find>mGestureDetector</find>
+      <find>release</find>
+      <find>RTMPPacket</find>
     </findStrings>
     <replaceStrings>
       <replace>OpenSLAudioPlay</replace>
@@ -300,26 +276,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/screen/ScreenRecordEncoder.java" />
-        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVMediaCodecActivity.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/controller/StreamController.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/packer/flv/FlvPackerHelper.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/packer/flv/FlvPacker.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/sender/rtmp/io/WriteThread.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/mediacodec/AudioMediaCodec.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/focus/FocusPieView.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/ui/CameraView.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/sender/rtmp/RtmpNativeSendr.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/ykav_sample/src/main/res/layout/activity_sample.xml" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/utils/Constants.h" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/VideoChannel.h" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/player/player-lib.cpp" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/YKPusher.h" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/AudioVideoParameter.java" />
         <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/PusherActivity.java" />
-        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/SampleActivity.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraHolder.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/configuration/VideoConfiguration.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/configuration/AudioConfiguration.java" />
         <option value="$PROJECT_DIR$/ykav_sample/src/main/res/layout-land/activity_pusher.xml" />
@@ -334,12 +293,9 @@
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/VideoChannel.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/AudioChannel.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/ui/SoftLivingView.java" />
-        <option value="$PROJECT_DIR$/ykav_common/build.gradle" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/Constants.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/RTMPModel.h" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/YKPusher.cpp" />
-        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVSoftPushActivity.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraUtils.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/VideoChannel.cpp" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/capture/AudioCapture.java" />
         <option value="$PROJECT_DIR$/ykav_sample/src/main/AndroidManifest.xml" />
@@ -348,18 +304,37 @@
         <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/AudioChannel.cpp" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/audio/AudioUtils.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/video/MyRecorder.java" />
-        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/PusherManager.java" />
         <option value="$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/RTMPModel.cpp" />
         <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVCodecPushActivity.java" />
+        <option value="$PROJECT_DIR$/ykav_common/build.gradle" />
+        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/PusherManager.java" />
+        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/AudioVideoParameter.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/MultiCardView.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/build.gradle" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/res/layout/activity_sample.xml" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/SampleActivity.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/sampling/CpuInfo.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/memory/LeakCanaryService.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/GLog.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/time/TimeMonitor.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/sampling/BaseSampler.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/sampling/CpuInfoSampler.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/UiPerfMonitor.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/UiPerfMonitorConfig.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/LogWriteThread.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/LogPrinter.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/App.java" />
+        <option value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVSoftPushActivity.java" />
+        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraUtils.java" />
+        <option value="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraHolder.java" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="31" />
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="984" />
+    <option name="x" value="1680" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -369,6 +344,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -385,73 +363,6 @@
               <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
               <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-              <item name="obj" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-              <item name="obj" type="462c0819:PsiDirectoryNode" />
-              <item name="armeabi-v7a" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake" type="462c0819:PsiDirectoryNode" />
-              <item name="release" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -460,6 +371,42 @@
               <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="cpp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="cpp" type="462c0819:PsiDirectoryNode" />
+              <item name="librtmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="cpp" type="462c0819:PsiDirectoryNode" />
+              <item name="librtmp" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="cpp" type="462c0819:PsiDirectoryNode" />
+              <item name="pusher" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
@@ -477,6 +424,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="devyk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ykav_common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="devyk" type="462c0819:PsiDirectoryNode" />
+              <item name="pusher_common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
@@ -513,37 +470,74 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ykav_sample" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ykav_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ndk_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ykav_sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="mipmap-xhdpi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.github.pruas:Caton:v1.0.1@aar" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.github.pruas:Caton:v1.0.1@aar" type="70bed36:NamedLibraryElementNode" />
+              <item name="classes.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ndk_sample" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.github.pruas:Caton:v1.0.1@aar" type="70bed36:NamedLibraryElementNode" />
+              <item name="classes.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="caton" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DEBUGGABLE_DEVICE" value="huawei-mha_al00-3HX0216A22004748" />
+    <property name="DEBUGGABLE_DEVICE" value="mha_al00-3HX0216A22004748" />
     <property name="DEBUGGABLE_PROCESS" value="com.devyk.ykav_sample" />
-    <property name="DEBUGGER_ID" value="Native" />
+    <property name="DEBUGGER_ID" value="Java" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../Android/SDK" />
     <property name="device.picker.selection" value="3HX0216A22004748" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.33168316" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ykav_sample/src/main/java/monitor" />
+      <recent name="$PROJECT_DIR$/ykav_sample/src/main/java" />
+      <recent name="$PROJECT_DIR$/ykav_sample/src/main/res/mipmap-xhdpi" />
+      <recent name="$PROJECT_DIR$/ykav_common/src/main/jniLibs" />
       <recent name="$PROJECT_DIR$/ykav_common/src/main/cpp/librtmp" />
-      <recent name="$PROJECT_DIR$/yklive" />
-      <recent name="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk" />
-      <recent name="$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream" />
-      <recent name="$PROJECT_DIR$/ykav_sample/src/main/res/mipmap-hdpi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ykav_common/src/main/cpp/librtmp/include" />
@@ -1137,14 +1131,29 @@
       <option name="project" value="LOCAL" />
       <updated>1583077355738</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="打包 so">
+      <created>1583159620322</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1583159620322</updated>
+    </task>
+    <task id="LOCAL-00017" summary="打包 so">
+      <created>1583159682093</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1583159682093</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="1680" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" sideWeight="0.091726616" side_tool="true" weight="0.3925519" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.2852311" visible="true" weight="0.34188035" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.2852311" visible="true" weight="0.34185302" />
       <window_info id="Structure" order="2" sideWeight="0.7147689" side_tool="true" weight="0.3925519" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -1154,22 +1163,22 @@
       <window_info id="Capture Tool" order="8" />
       <window_info id="Favorites" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32857144" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4993895" weight="0.30101466" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4993895" weight="0.39215687" />
       <window_info anchor="bottom" id="DB Execution Console" order="2" />
       <window_info anchor="bottom" id="TODO" order="3" />
-      <window_info anchor="bottom" id="Android Profiler" order="4" weight="0.32970297" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.8070818" weight="0.32772276" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50061053" side_tool="true" weight="0.50714284" />
+      <window_info anchor="bottom" id="Android Profiler" order="4" show_stripe_button="false" weight="0.96732026" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.8070818" weight="0.3272727" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5005325" side_tool="true" weight="0.6069307" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Build" order="8" visible="true" weight="0.20714286" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.68877554" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49893504" visible="true" weight="0.22178218" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946752" weight="0.6069307" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.32919955" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.32967034" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.2008547" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.2002442" />
     </layout>
     <layout-to-restore>
       <window_info id="Captures" order="0" sideWeight="0.08839779" side_tool="true" weight="0.34231538" />
@@ -1212,7 +1221,8 @@
     <MESSAGE value="update README" />
     <MESSAGE value="实现软编(aac,x264) rtmp 推流" />
     <MESSAGE value="基于 来疯直播 SDK 加了 native 推流" />
-    <option name="LAST_COMMIT_MESSAGE" value="基于 来疯直播 SDK 加了 native 推流" />
+    <MESSAGE value="打包 so" />
+    <option name="LAST_COMMIT_MESSAGE" value="打包 so" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1510,7 +1520,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraUtils.java</url>
-          <line>94</line>
+          <line>106</line>
           <properties />
           <option name="timeStamp" value="576" />
         </line-breakpoint>
@@ -1538,6 +1548,24 @@
           <properties />
           <option name="timeStamp" value="620" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/SampleActivity.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="639" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/UiPerfMonitor.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="646" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/LogWriteThread.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="647" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/screen/ScreenRecordEncoder.java</url>
           <line>116</line>
@@ -1550,411 +1578,257 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/utils/safe_queue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/VideoChannel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/video/RenderSrfTex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2463">
-          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_sample/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/controller/StreamController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="126" column="25" lean-forward="true" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
-          <folding>
-            <element signature="e#1573#1574#0" expanded="true" />
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#3489#3490#0" expanded="true" />
-            <element signature="e#3532#3533#0" expanded="true" />
-            <element signature="e#3662#3663#0" expanded="true" />
-            <element signature="e#3718#3719#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/packer/Packer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/controller/audio/NormalAudioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/AudioChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="82" column="29" lean-forward="true" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/capture/AudioCapture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/media/AudioRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="1163" column="82" selection-start-line="1163" selection-start-column="11" selection-end-line="1163" selection-end-column="82" />
-          <folding>
-            <element signature="e#39294#39295#0" expanded="true" />
-            <element signature="e#39323#39324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/audio/AudioProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="39" selection-start-line="39" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-manifest" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/resume.html" />
     <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
       <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/video/MyRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="229" column="16" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/res/layout/layout_camera_view.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/focus/FocusPieView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="113" column="42" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraZoomListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/ui/CameraView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="180" column="34" selection-start-line="180" selection-start-column="34" selection-end-line="180" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/ui/RenderSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2186#2388#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="155" column="47" lean-forward="true" selection-start-line="155" selection-start-column="47" selection-end-line="155" selection-end-column="47" />
-          <folding>
-            <element signature="e#7808#7809#0" expanded="true" />
-            <element signature="e#7853#7854#0" expanded="true" />
-            <element signature="e#10371#10372#0" expanded="true" />
-            <element signature="e#10430#10431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/player/YKPlayer.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/player/include/AudioChannel.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/librtmp/include/amf.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/ffmpeg/include/libswresample/swresample.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="218" column="4" selection-start-line="218" selection-start-column="4" selection-end-line="218" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/ffmpeg/include/libavutil/channel_layout.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../Android/NDK/android-ndk-r17c/sources/cxx-stl/llvm-libc++/include/deque">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1762" selection-start-line="1762" selection-end-line="1762" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/include/AudioChannel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/librtmp/include/rtmp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="117" column="14" lean-forward="true" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/player/AudioChannel.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/audio/AudioUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/packer/flv/FlvPackerHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="211" column="32" selection-start-line="211" selection-start-column="32" selection-end-line="211" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/packer/rtmp/RtmpPacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="75" column="76" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/configuration/AudioConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/packer/AnnexbHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/audio/AudioEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="39" selection-start-line="39" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/mediacodec/AudioMediaCodec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/ui/CameraLivingView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2475">
-          <caret line="167" column="62" selection-start-line="167" selection-start-column="62" selection-end-line="167" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/video/InputSurface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#1509#1510#0" expanded="true" />
-            <element signature="e#1531#1532#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/video/MyRecorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/PusherManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="68" selection-start-line="68" selection-end-line="73" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/stream/sender/nativertmp/RtmpNativeSendr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1276#1277#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3336#3337#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/configuration/VideoConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="57" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/mediacodec/VideoMediaCodec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/YKPusher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="145" selection-start-line="145" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/AudioChannel.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="163" selection-start-line="163" selection-end-line="180" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/VideoChannel.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="332" selection-start-line="332" selection-end-line="356" selection-end-column="1" />
-          <folding>
-            <element signature="e#1172#2892#0" />
-            <element signature="e#3264#4962#0" />
-            <element signature="e#4965#6505#0" />
-            <element signature="e#6507#7768#0" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/RTMPModel.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="2865">
           <caret line="191" selection-start-line="191" selection-end-line="202" selection-end-column="1" />
           <folding>
             <element signature="e#39#69#0" expanded="true" />
-            <element signature="e#2242#3829#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../breakpad/src/minidump_stackwalk/test.trace" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/MultiCardView.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/res/mipmap-xhdpi/rtmp.png" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/res/mipmap-xhdpi/rtmp1.png" />
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/video/GLSLFileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/PusherManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#4415#4416#0" expanded="true" />
+            <element signature="e#4454#4455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256995">
+          <caret line="17562" column="14" selection-start-line="17562" selection-start-column="14" selection-end-line="17562" selection-end-column="14" />
+          <folding>
+            <element signature="e#718055#718056#0" expanded="true" />
+            <element signature="e#718087#718088#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/view/ViewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86715">
+          <caret line="5908" column="22" selection-start-line="5908" selection-start-column="22" selection-end-line="5908" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/view/ViewParent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_sample/ykav_sample.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_sample/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/BlockHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-292">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/BuildConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/Collector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/Config.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/FPSFrameCallBack.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/StackTraceCollector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/UILooperObserver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f56688372349c862efd842c599641bcf/jars/classes.jar!/com/seek/caton/Caton.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="4490" column="25" selection-start-line="4490" selection-start-column="25" selection-end-line="4490" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/res/layout/activity_sample.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/memory/LeakCanaryService.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/memory/TestDataModel.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/time/TimeMonitorConfig.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/sampling/BaseSampler.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/sampling/CpuInfo.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/UiPerfMonitorConfig.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/GLog.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/MonitorConfig.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/time/TimeMonitorManager.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/time/TimeMonitor.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/LogPrinterListener.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/LogPrinter.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/UiPerfMonitor.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/LogWriteThread.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/monitor/ui/sampling/CpuInfoSampler.java" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVSoftPushActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2523">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="1170">
+          <caret line="115" column="43" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/AVCodecPushActivity.java">
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="273" column="29" selection-start-line="273" selection-start-column="29" selection-end-line="273" selection-end-column="29" />
+        <state relative-caret-position="555">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/view/GestureDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5085">
+          <caret line="384" column="11" selection-start-line="384" selection-start-column="11" selection-end-line="384" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Android/SDK/sources/android-29/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4305">
+          <caret line="317" column="25" selection-start-line="317" selection-start-column="25" selection-end-line="317" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initLiveView#0;class#AVCodecPushActivity#0" />
-            <element signature="e#8724#8725#0" expanded="true" />
-            <element signature="e#8768#8769#0" expanded="true" />
+            <element signature="e#11949#11950#0" expanded="true" />
+            <element signature="e#11983#11984#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ykav_common/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/ykav_sample/src/main/java/com/devyk/ykav_sample/SampleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/ui/SoftLivingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/pusher_common/VideoChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/java/com/devyk/camera/CameraHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="163" column="30" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/pusher/AudioChannel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="94" column="18" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ykav_common/src/main/cpp/librtmp/include/rtmp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="112" column="27" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="27" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

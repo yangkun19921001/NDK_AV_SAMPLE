@@ -23,4 +23,7 @@
         android:onClick="mediacodec_pusher"
         android:text="音视频硬编码推流器" />
 
+
+
+
 </LinearLayout>

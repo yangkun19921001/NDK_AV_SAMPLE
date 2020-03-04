@@ -4,6 +4,10 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.RectF;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +30,7 @@ import java.util.List;
  *     desc    : This is SampleActivity
  * </pre>
  */
-public class SampleActivity extends AppCompatActivity {
+public class  SampleActivity extends AppCompatActivity {
 
 
     private String[] mPermissions = new String[]{Manifest.permission.RECORD_AUDIO,
@@ -41,6 +45,21 @@ public class SampleActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {//6.0才用动态权限
             requestPermission();
+        }
+
+
+
+        int width = 720/3;
+        int height = 1280/3;
+
+        int yOffset = 40;
+        int xOffset = 40;
+
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 

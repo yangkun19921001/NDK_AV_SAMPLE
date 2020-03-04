@@ -42,6 +42,18 @@ public class CameraUtils {
     private static int sHeight;
     private static Camera sCamera;
 
+    public static void stop() {
+        if (sPreviewCallback != null)
+            sPreviewCallback = null;
+        if (sScreenListener != null)
+            sScreenListener = null;
+        if (sCamera != null) {
+            sCamera.release();
+            sCamera = null;
+        }
+
+    }
+
     public static List<CameraData> getAllCamerasData(boolean isBackFirst) {
         ArrayList<CameraData> cameraDatas = new ArrayList<>();
         Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
